@@ -1,3 +1,63 @@
 .page-header {
   position: relative;
+  display: flex;
+  background: transparent;
+  align-items: center;
+  height: 100%;
+
+  .main-nav__list {
+    @include clearlist;
+    text-align: center;
+
+    li {
+      display: block;
+      //margin-right: 61px;
+      &.order-game {
+        a {
+          padding: 15px 50px;
+          background-color: #00BC87;
+          border-radius: 5px;
+          &:hover {
+            color: $text-color-white;
+          }
+        }
+      }
+      a {
+        color: $link-color-menu;
+        font-family: $font-family-prox-reg;
+        &:hover {
+          color: $green-color;
+          transition: all .3s ease-in-out;
+        }
+      }
+      @include min-w($screen-md) {
+        display: inline-block;
+      }
+    }
+  }
+
+  @include max-w($screen-lg) {
+    background-color: $text-color-main-dark;
+    flex-direction: column;
+  }
+  @include min-w($screen-lg) {
+    width: 100%;
+    max-width: $container-width;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+    max-height: 83px;
+    left: 0;
+    right: 0;
+
+    .main-nav__list {
+      li {
+        margin-right: 61px;
+        &.order-game {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }

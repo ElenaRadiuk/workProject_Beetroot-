@@ -1,26 +1,29 @@
 <?php
 /*
- * Template Name: Custom Template
+ * Template Name: Home Template
  */
 ?>
 
 <?php get_header(); ?>
-
 	<main id="main" class="page-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+    <?php if ( have_posts() ) : ?>
+      <?php while ( have_posts() ) : the_post(); ?>
 
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <section class="top-banner">
+            <?php get_template_part( 'template-parts/content', 'top_banner' ); ?>
+        </section>
+        <section class="offer">
+          <?php get_template_part( 'template-parts/content', 'offer' ); ?>
+        </section>
 
-      	<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+        <section class="map-and-order">
+          <?php get_template_part( 'template-parts/content', 'map_order' ); ?>
+        </section>
 
-      	<div class="page-content">
-      		<?php the_content(); ?>
-      	</div>
 
-      </article>
-
-		<?php endwhile; ?>
+      <?php endwhile; ?>
+    <?php endif; ?>
 
 	</main>
 

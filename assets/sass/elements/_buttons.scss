@@ -12,3 +12,25 @@
   text-transform: uppercase;
   color: #fff;
 }
+
+.btn-offer {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  outline: 0 none;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  padding: 18px 77px;
+  color: $text-color-light-dark;
+  font-size: 13px;
+  font-family: $font-family-prox-light;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $green-color;
+    border-color: transparent;
+    color: white;
+    transition: all .4s ease-in-out;
+  }
+}

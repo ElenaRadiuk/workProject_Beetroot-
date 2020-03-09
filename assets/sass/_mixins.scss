@@ -35,6 +35,10 @@
   @media screen and (max-width: $width) { @content; }
 }
 
+@mixin min-w-max-w($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width){ @content; }
+}
+
 // Fluid font size
 // $f-min - min font size
 // $f-max - max font size

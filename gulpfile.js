@@ -96,7 +96,7 @@ gulp.task('serve', ['build-dev'], function() {
     files: ['{include,template-parts,woocommerce}/**/*.php', '*.php'],
     proxy: devDomain,
     open: false,
-    port: 5050,
+    port: 8010,
     snippetOptions: {
       whitelist: ['/wp-admin/admin-ajax.php'],
       blacklist: ['/wp-admin/**']

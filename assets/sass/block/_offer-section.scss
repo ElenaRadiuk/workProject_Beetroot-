@@ -1,0 +1,111 @@
+.offer {
+  @include min-w(($screen-xl)+1) {
+    min-height: 540px;
+  }
+}
+
+.offer__wrapper {
+  background: $grey-color;
+  //padding: 35px 20px;
+  padding: 77px 42px 40px;
+
+
+  @include min-w(($screen-xl)+1) {
+    padding: 105px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1346px;
+    justify-content: flex-start;
+    position: absolute;
+    top: -150px;
+    right: 0;
+    background: $grey-color;
+  }
+
+  @include max-w($screen-xl) {
+    padding: 55px 42px;
+  }
+
+  .offer_arrow {
+    display: none;
+    @include min-w($screen-xl) {
+      display: inline-block;
+      position: absolute;
+      left: -141px;
+      top: 50%;
+    }
+  }
+
+  .offer_item {
+    @include max-w($screen-md) {
+     padding-bottom: 85px;
+    }
+
+    @include min-w($screen-lg) {
+      margin-right: 48px;
+    }
+
+    .offer_item__img {
+      display: flex;
+      align-items: center;
+      width: 49px;
+      height: 33px;
+      border-radius: 17px;
+
+      &.bg-1 {
+        background-color: $green-color;
+      }
+      &.bg-2 {
+        background-color: #D00090;
+      }
+      &.bg-3 {
+        background-color: #FFB000;
+      }
+      img {
+        display: inline-block;
+        margin: 0 auto;
+      }
+      svg {
+        max-width: 24px;
+        height: auto;
+      }
+    }
+
+    .offer_item__title {
+      font-family: $font-family-prox-light;
+      color: $text-color-main-dark;
+      line-height: 34px;
+      font-size: 28px;
+      font-weight: normal;
+      @include min-w($screen-lg) {
+        line-height: 34px;
+        font-size: 28px;
+        margin: 36px 0 33px;
+      }
+    }
+
+    .offer_item__text {
+      font-family: $font-family-prox-light;
+      color: $text-color-main-dark;
+      line-height: 26px;
+      font-size: 18px;
+      @include min-w($screen-lg) {
+        line-height: 34px;
+        font-size: 28px;
+        max-width: 252px;
+        min-height: 81px;
+        margin-bottom: 36px;
+      }
+    }
+
+    .offer_item__link {
+      display: inline-block;
+      @include max-w($screen-md) {
+        margin-top: 25px;
+      }
+    }
+
+  }
+
+}

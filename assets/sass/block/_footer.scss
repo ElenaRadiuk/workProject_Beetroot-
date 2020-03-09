@@ -1,3 +1,128 @@
 .page-footer {
 	position: relative;
+  background-color: $footer-blue-dark;
+
+  @include min-w($screen-xxl) {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-footer_wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $container-width;
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      color: $green-color;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  .page-footer_main-menu {
+
+    align-items: center;
+    border-bottom: 1px solid #707070;
+    padding: 50px 42px;
+    @include max-w($screen-md) {
+      padding: 0 42px 50px;
+    }
+    @include min-w($screen-md) {
+      display: flex;
+    }
+    .main-nav {
+      @include min-w($screen-md) {
+        flex: 1;
+        display: flex;
+      }
+      .main-nav__list {
+        @include min-w($screen-md) {
+          display: flex;
+        }
+        li {
+          margin-right: 30px;
+          padding-top: 5px;
+          a {
+            font-family: $font-family-prox-semi;
+          }
+          @include max-w($screen-md) {
+              margin-top: 25px;
+              display: block;
+          }
+        }
+
+      }
+
+    }
+
+    .main-nav_social {
+        @include max-w($screen-md) {
+          margin-top: 81px;
+      }
+      .main-nav__list {
+        display: flex;
+        li {
+          margin-left: 0;
+          margin-right: 25px;
+          @include min-w($screen-md) {
+            margin-left: 25px;
+          }
+        }
+        .fb-footer {
+          width: 17px;
+          height: 17px;
+          background: url('../images/iconFacebook.svg') no-repeat center;
+        }
+        .insta-footer {
+          width: 17px;
+          height: 17px;
+          background: url('../images/iconInstagram.svg') no-repeat center;
+        }
+      }
+    }
+  }
+
+  .page-footer_sub-menu {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 5px;
+    color: #717171;
+    @include max-w($screen-md) {
+      padding: 57px 42px 67px;
+      flex-direction: column;
+    }
+
+    .main-nav__list {
+      @include min-w($screen-md) {
+        display: flex;
+      }
+      li {
+        margin-right: 50px;
+        @include max-w($screen-md) {
+          margin: 0;
+          margin-bottom: 25px;
+          flex-direction: column;
+        }
+
+
+        a {
+          color: #717171;
+        }
+
+        p {
+          @include max-w($screen-md) {
+            margin: 0;
+            margin-bottom: 25px;
+          }
+        }
+      }
+      .copyright {
+        color: #717171;
+      }
+    }
+  }
 }
