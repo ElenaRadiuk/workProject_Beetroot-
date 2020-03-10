@@ -5,7 +5,8 @@
 </head>
 
 <body <?php body_class("page-body"); ?>>
-
+<?php $add_class = is_front_page() ? 'home' : '';?>
+<div class="page-header_wrapper <?php echo $add_class;?>">
 	<header class="page-header">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
       <img src="<?php bloginfo('template_url'); ?>/assets//images/logo.svg" alt="galaxy logo"/>
@@ -16,3 +17,4 @@
 		</nav>
 
 	</header>
+</div>

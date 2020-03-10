@@ -49,8 +49,6 @@
   }
 
   .top-banner_text__wrapper {
-    //position: absolute;
-
     line-height: 70px;
     font-size: 52px;
     color: $text-color-white;
@@ -58,7 +56,7 @@
 
     .top-banner__sub-text {
       font-family: $font-family-prox-light;
-      color: $text-color-light-grey;
+      color: white;
       font-size: 18px;
       line-height: 26px;
 
@@ -131,11 +129,11 @@
 
   @include min-w($screen-lg) {
     .top-banner_text__wrapper {
-      font-family: $font-family-prox-light;
+      font-family: $font-family-prox-bold;
 
       .top-banner__sub-text {
         font-size: 18px;
-        font-family: $font-family-prox-light;
+        font-family: $font-family-prox-bold;
         line-height: 18px;
         @include min-w($screen-xxxl) {
          margin-bottom: 190px;
@@ -145,7 +143,6 @@
         font-size: 52px;
         h1 {
           font-family: $font-family-prox-light;
-          //font-weight: lighter;
           font-size: 52px;
           line-height: 70px;
           font-weight: normal;
