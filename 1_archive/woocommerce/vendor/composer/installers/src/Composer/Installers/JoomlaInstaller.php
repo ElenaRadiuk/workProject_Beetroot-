@@ -7,7 +7,7 @@ class JoomlaInstaller extends BaseInstaller
         'component'    => 'components/{$name}/',
         'module'       => 'modules/{$name}/',
         'template'     => 'templates/{$name}/',
-        'plugin'       => 'plugins/{$name}/',
+        'plugin'       => '1plugins/{$name}/',
         'library'      => 'libraries/{$name}/',
     );
 

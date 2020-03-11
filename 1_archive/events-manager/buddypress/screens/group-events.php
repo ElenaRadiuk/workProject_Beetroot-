@@ -13,7 +13,7 @@ function bp_em_group_events() {
 	add_action( 'bp_template_content', 'bp_em_group_events_content' );
 	
 	/* Finally load the plugin template file. */
-	bp_core_load_template( apply_filters( 'bp_core_template_plugin', 'groups/single/plugins' ) );
+	bp_core_load_template( apply_filters( 'bp_core_template_plugin', 'groups/single/1plugins' ) );
 }
 
 function bp_em_group_events_title() {

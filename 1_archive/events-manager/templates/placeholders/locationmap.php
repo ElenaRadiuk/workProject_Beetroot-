@@ -1,6 +1,6 @@
 <?php 
 /*
- * This file contains the HTML generated for a single location Google map. You can copy this file to yourthemefolder/plugins/events/templates and modify it in an upgrade-safe manner.
+ * This file contains the HTML generated for a single location Google map. You can copy this file to yourthemefolder/1plugins/events/templates and modify it in an upgrade-safe manner.
  * 
  * There is one argument passed to you, which is the $args variable. This contains the arguments you could pass into shortcodes, template tags or functions like EM_Events::get().
  * 

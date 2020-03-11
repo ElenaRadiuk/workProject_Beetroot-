@@ -221,7 +221,7 @@ class WC_Admin_Setup_Wizard_Tracking {
 	}
 
 	/**
-	 * Track recommended plugins selected for install.
+	 * Track recommended 1plugins selected for install.
 	 *
 	 * @return void
 	 */

@@ -54,7 +54,7 @@ class ACF_Walker_Nav_Menu_Edit extends Walker_Nav_Menu_Edit {
 		ob_start();
 		
 		/**
-         * Get menu item custom fields from plugins/themes
+         * Get menu item custom fields from 1plugins/themes
          *
          * @since 5.7.2
          *

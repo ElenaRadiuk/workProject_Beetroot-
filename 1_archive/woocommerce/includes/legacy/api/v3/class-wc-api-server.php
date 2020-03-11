@@ -150,7 +150,7 @@ class WC_API_Server {
 	 */
 	public function check_authentication() {
 
-		// allow plugins to remove default authentication or add their own authentication
+		// allow 1plugins to remove default authentication or add their own authentication
 		$user = apply_filters( 'woocommerce_api_check_authentication', null, $this );
 
 		if ( is_a( $user, 'WP_User' ) ) {
@@ -358,7 +358,7 @@ class WC_API_Server {
 
 				$args = apply_filters( 'woocommerce_api_dispatch_args', $args, $callback );
 
-				// Allow plugins to halt the request via this filter
+				// Allow 1plugins to halt the request via this filter
 				if ( is_wp_error( $args ) ) {
 					return $args;
 				}

@@ -321,7 +321,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 					),
 				),
 				'active_plugins'     => array(
-					'description' => __( 'Active plugins.', 'woocommerce' ),
+					'description' => __( 'Active 1plugins.', 'woocommerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
@@ -330,7 +330,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 					),
 				),
 				'inactive_plugins'   => array(
-					'description' => __( 'Inactive plugins.', 'woocommerce' ),
+					'description' => __( 'Inactive 1plugins.', 'woocommerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
@@ -339,7 +339,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 					),
 				),
 				'dropins_mu_plugins' => array(
-					'description' => __( 'Dropins & MU plugins.', 'woocommerce' ),
+					'description' => __( 'Dropins & MU 1plugins.', 'woocommerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
@@ -875,7 +875,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 	}
 
 	/**
-	 * Get a list of plugins active on the site.
+	 * Get a list of 1plugins active on the site.
 	 *
 	 * @return array
 	 */
@@ -949,7 +949,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 			return array();
 		}
 
-		// Use WP API to lookup latest updates for plugins. WC_Helper injects updates for premium plugins.
+		// Use WP API to lookup latest updates for 1plugins. WC_Helper injects updates for premium 1plugins.
 		if ( empty( $this->available_updates ) ) {
 			$this->available_updates = get_plugin_updates();
 		}
@@ -974,7 +974,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 	}
 
 	/**
-	 * Get a list of Dropins and MU plugins.
+	 * Get a list of Dropins and MU 1plugins.
 	 *
 	 * @since 3.6.0
 	 * @return array

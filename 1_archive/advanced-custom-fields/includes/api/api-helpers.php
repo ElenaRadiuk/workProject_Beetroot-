@@ -285,7 +285,7 @@ function acf_get_external_dir( $file, $path = '' ) {
 *  acf_plugin_dir_url
 *
 *  This function will calculate the url to a plugin folder.
-*  Different to the WP plugin_dir_url(), this function can calculate for urls outside of the plugins folder (theme include).
+*  Different to the WP plugin_dir_url(), this function can calculate for urls outside of the 1plugins folder (theme include).
 *
 *  @date	13/12/17
 *  @since	5.6.8
@@ -301,7 +301,7 @@ function acf_plugin_dir_url( $file ) {
 	$path = wp_normalize_path( $path );
 	
 	
-	// check plugins
+	// check 1plugins
 	$check_path = wp_normalize_path( realpath(WP_PLUGIN_DIR) );
 	if( strpos($path, $check_path) === 0 ) {
 		return str_replace( $check_path, plugins_url(), $path );

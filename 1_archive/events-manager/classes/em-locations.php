@@ -325,7 +325,7 @@ $limit $offset
 			//EM_Events has a special argument for recurring events (the template), where it automatically omits recurring event templates. If we are searching events, and recurring was not explicitly set, we set it to the same as in EM_Events default
 			if( $join_events_table && $args['recurring'] === null ) $args['recurring'] = false;
 		}else{ $join_events_table = true; }//end temporary if( !empty($args['groupby']).... wrapper
-		//plugins can override this optional joining behaviour here in case they add custom WHERE conditions or something like that
+		//1plugins can override this optional joining behaviour here in case they add custom WHERE conditions or something like that
 		return apply_filters('em_locations_check_events_table_join', $join_events_table, $args, $event_fields);
 	}
 	

@@ -317,7 +317,7 @@ class WC_Checkout {
 	 * @return int|WP_ERROR
 	 */
 	public function create_order( $data ) {
-		// Give plugins the opportunity to create an order themselves.
+		// Give 1plugins the opportunity to create an order themselves.
 		$order_id = apply_filters( 'woocommerce_create_order', null, $this );
 		if ( $order_id ) {
 			return $order_id;

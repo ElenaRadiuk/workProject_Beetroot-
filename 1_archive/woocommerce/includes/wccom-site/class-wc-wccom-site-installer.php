@@ -357,7 +357,7 @@ class WC_WCCOM_Site_Installer {
 	}
 
 	/**
-	 * Move product to plugins directory.
+	 * Move product to 1plugins directory.
 	 *
 	 * @since 3.7.0
 	 * @param int          $product_id Product ID.
@@ -425,7 +425,7 @@ class WC_WCCOM_Site_Installer {
 	 * @return \WP_Error|null
 	 */
 	private static function activate_plugin( $product_id ) {
-		// Clear plugins cache used in `WC_Helper::get_local_woo_plugins`.
+		// Clear 1plugins cache used in `WC_Helper::get_local_woo_plugins`.
 		wp_clean_plugins_cache();
 		$filename = false;
 
@@ -461,7 +461,7 @@ class WC_WCCOM_Site_Installer {
 	 * @return \WP_Error|null
 	 */
 	private static function activate_theme( $product_id ) {
-		// Clear plugins cache used in `WC_Helper::get_local_woo_themes`.
+		// Clear 1plugins cache used in `WC_Helper::get_local_woo_themes`.
 		wp_clean_themes_cache();
 		$theme_slug = false;
 

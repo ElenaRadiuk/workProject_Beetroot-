@@ -2,7 +2,7 @@
 /**
  * Single Product Share
  *
- * Sharing plugins can hook into here or you can add your own code directly.
+ * Sharing 1plugins can hook into here or you can add your own code directly.
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/share.php.
  *
@@ -21,6 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-do_action( 'woocommerce_share' ); // Sharing plugins can hook into here.
+do_action( 'woocommerce_share' ); // Sharing 1plugins can hook into here.
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

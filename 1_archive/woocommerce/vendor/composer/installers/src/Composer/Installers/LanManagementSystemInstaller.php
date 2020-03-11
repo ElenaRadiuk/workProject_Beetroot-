@@ -6,7 +6,7 @@ class LanManagementSystemInstaller extends BaseInstaller
 {
 
     protected $locations = array(
-        'plugin' => 'plugins/{$name}/',
+        'plugin' => '1plugins/{$name}/',
         'template' => 'templates/{$name}/',
         'document-template' => 'documents/templates/{$name}/',
         'userpanel-module' => 'userpanel/modules/{$name}/',

@@ -215,7 +215,7 @@ class WC_Cache_Helper {
 	}
 
 	/**
-	 * Set constants to prevent caching by some plugins.
+	 * Set constants to prevent caching by some 1plugins.
 	 *
 	 * @param  mixed $return Value to return. Previously hooked into a filter.
 	 * @return mixed

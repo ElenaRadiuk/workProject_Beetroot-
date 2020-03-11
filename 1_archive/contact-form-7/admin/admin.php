@@ -79,7 +79,7 @@ function wpcf7_admin_menu_change_notice( $menu_slug = '' ) {
 
 	if ( $count ) {
 		return sprintf(
-			' <span class="update-plugins %1$d"><span class="plugin-count">%2$s</span></span>',
+			' <span class="update-1plugins %1$d"><span class="plugin-count">%2$s</span></span>',
 			$count,
 			esc_html( number_format_i18n( $count ) )
 		);

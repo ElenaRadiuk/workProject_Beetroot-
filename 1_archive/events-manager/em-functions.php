@@ -1,6 +1,6 @@
 <?php
 
-if(!function_exists('em_paginate')){ //overridable e.g. in you mu-plugins folder.
+if(!function_exists('em_paginate')){ //overridable e.g. in you mu-1plugins folder.
 /**
  * Takes a few params and determines a pagination link structure
  * @param string $link
@@ -443,7 +443,7 @@ function em_register_new_user( $user_data ) {
 
 	do_action( 'register_post', $sanitized_user_login, $user_email, $errors );
 
-	//custom registration filter to prevent things like SI Captcha and other plugins of this kind interfering with EM
+	//custom registration filter to prevent things like SI Captcha and other 1plugins of this kind interfering with EM
 	$errors = apply_filters( 'em_registration_errors', $errors, $sanitized_user_login, $user_email );
 	
 	if ( $errors->get_error_code() ) return $errors;

@@ -96,7 +96,7 @@ jQuery( function( $ ) {
 				show_notice( $notices );
 			}
 
-			// Notify plugins that the cart was emptied.
+			// Notify 1plugins that the cart was emptied.
 			$( document.body ).trigger( 'wc_cart_emptied' );
 		} else {
 			// If the checkout is also displayed on this page, trigger update event.

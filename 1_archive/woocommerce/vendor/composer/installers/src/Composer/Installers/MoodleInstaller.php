@@ -6,7 +6,7 @@ class MoodleInstaller extends BaseInstaller
     protected $locations = array(
         'mod'                => 'mod/{$name}/',
         'admin_report'       => 'admin/report/{$name}/',
-        'atto'               => 'lib/editor/atto/plugins/{$name}/',
+        'atto'               => 'lib/editor/atto/1plugins/{$name}/',
         'tool'               => 'admin/tool/{$name}/',
         'assignment'         => 'mod/assignment/type/{$name}/',
         'assignsubmission'   => 'mod/assign/submission/{$name}/',
@@ -48,7 +48,7 @@ class MoodleInstaller extends BaseInstaller
         'scormreport'        => 'mod/scorm/report/{$name}/',
         'search'             => 'search/engine/{$name}/',
         'theme'              => 'theme/{$name}/',
-        'tinymce'            => 'lib/editor/tinymce/plugins/{$name}/',
+        'tinymce'            => 'lib/editor/tinymce/1plugins/{$name}/',
         'profilefield'       => 'user/profile/field/{$name}/',
         'webservice'         => 'webservice/{$name}/',
         'workshopallocation' => 'mod/workshop/allocation/{$name}/',

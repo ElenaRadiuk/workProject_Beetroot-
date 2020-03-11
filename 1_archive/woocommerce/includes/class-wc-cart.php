@@ -1023,7 +1023,7 @@ class WC_Cart extends WC_Legacy_Cart {
 				return false;
 			}
 
-			// Load cart item data - may be added by other plugins.
+			// Load cart item data - may be added by other 1plugins.
 			$cart_item_data = (array) apply_filters( 'woocommerce_add_cart_item_data', $cart_item_data, $product_id, $variation_id, $quantity );
 
 			// Generate a ID based on product ID, variation ID, variation data, and other cart item data.
@@ -1091,7 +1091,7 @@ class WC_Cart extends WC_Legacy_Cart {
 			} else {
 				$cart_item_key = $cart_id;
 
-				// Add item after merging with $cart_item_data - hook to allow plugins to modify cart item.
+				// Add item after merging with $cart_item_data - hook to allow 1plugins to modify cart item.
 				$this->cart_contents[ $cart_item_key ] = apply_filters(
 					'woocommerce_add_cart_item',
 					array_merge(
@@ -1324,7 +1324,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	 *
 	 * Shipping methods are responsible for looping through these packages.
 	 *
-	 * By default we pass the cart itself as a package - plugins can change this.
+	 * By default we pass the cart itself as a package - 1plugins can change this.
 	 * through the filter and break it up.
 	 *
 	 * @since 1.5.4

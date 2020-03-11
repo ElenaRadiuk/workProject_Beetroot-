@@ -16,7 +16,7 @@ function bp_em_attending() {
 	add_action( 'bp_template_content', 'bp_em_attending_content' );
 
 	/* Finally load the plugin template file. */
-	bp_core_load_template( apply_filters( 'bp_core_template_plugin', 'members/single/plugins' ) );
+	bp_core_load_template( apply_filters( 'bp_core_template_plugin', 'members/single/1plugins' ) );
 }
 
 	function bp_em_attending_title() {

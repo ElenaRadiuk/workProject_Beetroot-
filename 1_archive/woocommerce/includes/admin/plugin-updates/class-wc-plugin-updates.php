@@ -37,14 +37,14 @@ class WC_Plugin_Updates {
 	protected $new_version = '';
 
 	/**
-	 * Array of plugins lacking testing with the major version.
+	 * Array of 1plugins lacking testing with the major version.
 	 *
 	 * @var array
 	 */
 	protected $major_untested_plugins = array();
 
 	/**
-	 * Array of plugins lacking testing with the minor version.
+	 * Array of 1plugins lacking testing with the minor version.
 	 *
 	 * @var array
 	 */
@@ -117,7 +117,7 @@ class WC_Plugin_Updates {
 		}
 
 		/* translators: %s: version number */
-		$message = sprintf( __( "<strong>Heads up!</strong> The versions of the following plugins you're running haven't been tested with the latest version of WooCommerce (%s).", 'woocommerce' ), $new_version );
+		$message = sprintf( __( "<strong>Heads up!</strong> The versions of the following 1plugins you're running haven't been tested with the latest version of WooCommerce (%s).", 'woocommerce' ), $new_version );
 
 		ob_start();
 		include 'views/html-notice-untested-extensions-inline.php';
@@ -140,7 +140,7 @@ class WC_Plugin_Updates {
 		}
 
 		/* translators: %s: version number */
-		$message = sprintf( __( "<strong>Heads up!</strong> The versions of the following plugins you're running haven't been tested with WooCommerce %s. Please update them or confirm compatibility before updating WooCommerce, or you may experience issues:", 'woocommerce' ), $new_version );
+		$message = sprintf( __( "<strong>Heads up!</strong> The versions of the following 1plugins you're running haven't been tested with WooCommerce %s. Please update them or confirm compatibility before updating WooCommerce, or you may experience issues:", 'woocommerce' ), $new_version );
 
 		ob_start();
 		include 'views/html-notice-untested-extensions-inline.php';
@@ -171,7 +171,7 @@ class WC_Plugin_Updates {
 	*/
 
 	/**
-	 * Get active plugins that have a tested version lower than the input version.
+	 * Get active 1plugins that have a tested version lower than the input version.
 	 *
 	 * @param string $new_version WooCommerce version to test against.
 	 * @param string $release 'major' or 'minor'.
@@ -226,10 +226,10 @@ class WC_Plugin_Updates {
 	}
 
 	/**
-	 * Get plugins that have a valid value for a specific header.
+	 * Get 1plugins that have a valid value for a specific header.
 	 *
 	 * @param string $header Plugin header to search for.
-	 * @return array Array of plugins that contain the searched header.
+	 * @return array Array of 1plugins that contain the searched header.
 	 */
 	protected function get_plugins_with_header( $header ) {
 		$plugins = get_plugins();
@@ -245,7 +245,7 @@ class WC_Plugin_Updates {
 	}
 
 	/**
-	 * Get plugins which "maybe" are for WooCommerce.
+	 * Get 1plugins which "maybe" are for WooCommerce.
 	 *
 	 * @return array of plugin info arrays
 	 */

@@ -372,7 +372,7 @@ final class WC_Cart_Totals {
 					break;
 			}
 
-			// Allow plugins to override the default order.
+			// Allow 1plugins to override the default order.
 			$coupon->sort = apply_filters( 'woocommerce_coupon_sort', $coupon->sort, $coupon );
 		}
 
@@ -488,7 +488,7 @@ final class WC_Cart_Totals {
 		$tax_class      = $item->product->get_tax_class();
 		$item_tax_rates = isset( $this->item_tax_rates[ $tax_class ] ) ? $this->item_tax_rates[ $tax_class ] : $this->item_tax_rates[ $tax_class ] = WC_Tax::get_rates( $item->product->get_tax_class(), $this->cart->get_customer() );
 
-		// Allow plugins to filter item tax rates.
+		// Allow 1plugins to filter item tax rates.
 		return apply_filters( 'woocommerce_cart_totals_get_item_tax_rates', $item_tax_rates, $item, $this->cart );
 	}
 
@@ -657,7 +657,7 @@ final class WC_Cart_Totals {
 
 			if ( has_filter( 'woocommerce_get_discounted_price' ) ) {
 				/**
-				 * Allow plugins to filter this price like in the legacy cart class.
+				 * Allow 1plugins to filter this price like in the legacy cart class.
 				 *
 				 * This is legacy and should probably be deprecated in the future.
 				 * $item->object is the cart item object.
@@ -863,12 +863,12 @@ final class WC_Cart_Totals {
 		$this->set_total( 'total', round( $this->get_total( 'items_total', true ) + $this->get_total( 'fees_total', true ) + $this->get_total( 'shipping_total', true ) + wc_round_tax_total( array_sum( $this->get_merged_taxes( true ) ), 0 ), 0 ) );
 		$this->cart->set_total_tax( array_sum( $this->get_merged_taxes( false ) ) );
 
-		// Allow plugins to hook and alter totals before final total is calculated.
+		// Allow 1plugins to hook and alter totals before final total is calculated.
 		if ( has_action( 'woocommerce_calculate_totals' ) ) {
 			do_action( 'woocommerce_calculate_totals', $this->cart );
 		}
 
-		// Allow plugins to filter the grand total, and sum the cart totals in case of modifications.
+		// Allow 1plugins to filter the grand total, and sum the cart totals in case of modifications.
 		$this->cart->set_total( max( 0, apply_filters( 'woocommerce_calculated_total', $this->get_total( 'total' ), $this->cart ) ) );
 	}
 }

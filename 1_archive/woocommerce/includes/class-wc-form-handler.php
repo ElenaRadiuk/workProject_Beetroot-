@@ -294,7 +294,7 @@ class WC_Form_Handler {
 			$user->user_pass = $pass1;
 		}
 
-		// Allow plugins to return their own errors.
+		// Allow 1plugins to return their own errors.
 		$errors = new WP_Error();
 		do_action_ref_array( 'woocommerce_save_account_details_errors', array( &$errors, &$user ) );
 

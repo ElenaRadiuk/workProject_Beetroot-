@@ -207,7 +207,7 @@ class ACF {
 			return;
 		}
 		
-		// Update url setting. Allows other plugins to modify the URL (force SSL).
+		// Update url setting. Allows other 1plugins to modify the URL (force SSL).
 		acf_update_setting( 'url', plugin_dir_url( __FILE__ ) );
 		
 		// Load textdomain file.

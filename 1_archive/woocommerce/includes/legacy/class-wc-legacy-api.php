@@ -144,7 +144,7 @@ class WC_Legacy_API {
 		include_once( dirname( __FILE__ ) . '/api/v3/class-wc-api-taxes.php' );
 		include_once( dirname( __FILE__ ) . '/api/v3/class-wc-api-webhooks.php' );
 
-		// Allow plugins to load other response handlers or resource classes.
+		// Allow 1plugins to load other response handlers or resource classes.
 		do_action( 'woocommerce_api_loaded' );
 	}
 
@@ -199,7 +199,7 @@ class WC_Legacy_API {
 		include_once( dirname( __FILE__ ) . '/api/v1/class-wc-api-products.php' );
 		include_once( dirname( __FILE__ ) . '/api/v1/class-wc-api-reports.php' );
 
-		// Allow plugins to load other response handlers or resource classes.
+		// Allow 1plugins to load other response handlers or resource classes.
 		do_action( 'woocommerce_api_loaded' );
 
 		$this->server = new WC_API_Server( $GLOBALS['wp']->query_vars['wc-api-route'] );
@@ -246,7 +246,7 @@ class WC_Legacy_API {
 		include_once( dirname( __FILE__ ) . '/api/v2/class-wc-api-reports.php' );
 		include_once( dirname( __FILE__ ) . '/api/v2/class-wc-api-webhooks.php' );
 
-		// allow plugins to load other response handlers or resource classes.
+		// allow 1plugins to load other response handlers or resource classes.
 		do_action( 'woocommerce_api_loaded' );
 
 		$this->server = new WC_API_Server( $GLOBALS['wp']->query_vars['wc-api-route'] );

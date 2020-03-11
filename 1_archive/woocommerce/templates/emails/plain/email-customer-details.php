@@ -2,7 +2,7 @@
 /**
  * Additional Customer Details (plain)
  *
- * This is extra customer data which can be filtered by plugins. It outputs below the order item table.
+ * This is extra customer data which can be filtered by 1plugins. It outputs below the order item table.
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/email-addresses.php.
  *

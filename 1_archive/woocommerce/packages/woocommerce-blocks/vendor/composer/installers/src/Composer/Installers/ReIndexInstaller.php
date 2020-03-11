@@ -5,6 +5,6 @@ class ReIndexInstaller extends BaseInstaller
 {
     protected $locations = array(
         'theme'     => 'themes/{$name}/',
-        'plugin'    => 'plugins/{$name}/'
+        'plugin'    => '1plugins/{$name}/'
     );
 }

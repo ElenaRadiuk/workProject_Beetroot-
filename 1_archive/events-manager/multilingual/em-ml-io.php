@@ -173,7 +173,7 @@ class EM_ML_IO {
  
 	/**
 	 * Changes the event id of the link for duplication so that it duplicates the original event instead of a translation.
-	 * Translation plugins should hook into em_event_duplicate, checking to make sure it is the original translation and then duplicating the translations of the original event.
+	 * Translation 1plugins should hook into em_event_duplicate, checking to make sure it is the original translation and then duplicating the translations of the original event.
 	 * @param string $url
 	 * @param EM_Event $EM_Event
 	 * @return string
@@ -401,7 +401,7 @@ class EM_ML_IO {
 	}
 	
 	/**
-	 * Hooks into em_ticket_delete and allows multilingual plugins ot delete any external ticket string management. Note that
+	 * Hooks into em_ticket_delete and allows multilingual 1plugins ot delete any external ticket string management. Note that
 	 * the $EM_Ticket may not be a fully populated object, it may just contain the ticket_id and event_id properties such as in cases where
 	 * recurrences and their resulting tickets are deleted in bulk.
 	 * @param boolean $result

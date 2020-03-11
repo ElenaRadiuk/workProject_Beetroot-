@@ -249,7 +249,7 @@ class EM_Tickets_Bookings extends EM_Object implements Iterator, Countable {
 	}	
 	
 	/* Overrides EM_Object method to apply a filter to result
-	 * @see wp-content/plugins/events-manager/classes/EM_Object#build_sql_conditions()
+	 * @see wp-content/1plugins/events-manager/classes/EM_Object#build_sql_conditions()
 	 */
 	public static function build_sql_conditions( $args = array() ){
 		$conditions = apply_filters( 'em_tickets_build_sql_conditions', parent::build_sql_conditions($args), $args );
@@ -260,7 +260,7 @@ class EM_Tickets_Bookings extends EM_Object implements Iterator, Countable {
 	}
 	
 	/* Overrides EM_Object method to apply a filter to result
-	 * @see wp-content/plugins/events-manager/classes/EM_Object#build_sql_orderby()
+	 * @see wp-content/1plugins/events-manager/classes/EM_Object#build_sql_orderby()
 	 */
 	public static function build_sql_orderby( $args, $accepted_fields, $default_order = 'ASC' ){
 		return apply_filters( 'em_tickets_bookings_build_sql_orderby', parent::build_sql_orderby($args, $accepted_fields, get_option('dbem_events_default_order')), $args, $accepted_fields, $default_order );

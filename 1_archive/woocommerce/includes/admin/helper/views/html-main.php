@@ -9,7 +9,7 @@
 	<div class="subscriptions-header">
 		<h2><?php _e( 'Subscriptions', 'woocommerce' ); ?></h2>
 		<?php require WC_Helper::get_view_filename( 'html-section-account.php' ); ?>
-		<p><?php printf( __( 'Below is a list of extensions available on your WooCommerce.com account. To receive extension updates please make sure the extension is installed, and its subscription activated and connected to your WooCommerce.com account. Extensions can be activated from the <a href="%s">Plugins</a> screen.', 'woocommerce' ), admin_url( 'plugins.php' ) ); ?></p>
+		<p><?php printf( __( 'Below is a list of extensions available on your WooCommerce.com account. To receive extension updates please make sure the extension is installed, and its subscription activated and connected to your WooCommerce.com account. Extensions can be activated from the <a href="%s">Plugins</a> screen.', 'woocommerce' ), admin_url( '1plugins.php' ) ); ?></p>
 	</div>
 
 	<ul class="subscription-filter">

@@ -92,7 +92,7 @@ class WC_Admin_Setup_Wizard {
 
 	/**
 	 * The "automated tax" extra should only be shown if the current user can
-	 * install plugins and the store is in a supported country.
+	 * install 1plugins and the store is in a supported country.
 	 */
 	protected function should_show_automated_tax() {
 		if ( ! current_user_can( 'install_plugins' ) ) {
@@ -111,7 +111,7 @@ class WC_Admin_Setup_Wizard {
 
 	/**
 	 * Should we show the MailChimp install option?
-	 * True only if the user can install plugins.
+	 * True only if the user can install 1plugins.
 	 *
 	 * @return boolean
 	 */
@@ -121,7 +121,7 @@ class WC_Admin_Setup_Wizard {
 
 	/**
 	 * Should we show the Facebook install option?
-	 * True only if the user can install plugins,
+	 * True only if the user can install 1plugins,
 	 * and up until the end date of the recommendation.
 	 *
 	 * @return boolean
@@ -132,7 +132,7 @@ class WC_Admin_Setup_Wizard {
 
 	/**
 	 * Should we show the WooCommerce Admin install option?
-	 * True only if the user can install plugins,
+	 * True only if the user can install 1plugins,
 	 * and is running the correct version of WordPress.
 	 *
 	 * @see WC_Admin_Setup_Wizard::$wc_admin_plugin_minimum_wordpress_version
@@ -313,7 +313,7 @@ class WC_Admin_Setup_Wizard {
 			unset( $default_steps['shipping'] );
 		}
 
-		// Hide activate section when the user does not have capabilities to install plugins, think multiside admins not being a super admin.
+		// Hide activate section when the user does not have capabilities to install 1plugins, think multiside admins not being a super admin.
 		if ( ! current_user_can( 'install_plugins' ) ) {
 			unset( $default_steps['activate'] );
 		}
@@ -913,7 +913,7 @@ class WC_Admin_Setup_Wizard {
 	public function plugin_install_info() {
 		?>
 		<span class="plugin-install-info">
-			<span class="plugin-install-info-label"><?php esc_html_e( 'The following plugins will be installed and activated for you:', 'woocommerce' ); ?></span>
+			<span class="plugin-install-info-label"><?php esc_html_e( 'The following 1plugins will be installed and activated for you:', 'woocommerce' ); ?></span>
 			<span class="plugin-install-info-list"></span>
 		</span>
 		<?php
@@ -1094,7 +1094,7 @@ class WC_Admin_Setup_Wizard {
 							'description' => __( 'Use WooCommerce Shipping (powered by WooCommerce Services & Jetpack) to save time at the post office by printing your shipping labels at home.', 'woocommerce' ),
 							'img_url'     => WC()->plugin_url() . '/assets/images/obw-woocommerce-services-icon.png',
 							'img_alt'     => __( 'WooCommerce Services icon', 'woocommerce' ),
-							'plugins'     => $this->get_wcs_requisite_plugins(),
+							'1plugins'     => $this->get_wcs_requisite_plugins(),
 						)
 					);
 				elseif ( $is_shipstation_supported ) :
@@ -1105,7 +1105,7 @@ class WC_Admin_Setup_Wizard {
 							'description' => __( 'We recommend using ShipStation to save time at the post office by printing your shipping labels at home. Try ShipStation free for 30 days.', 'woocommerce' ),
 							'img_url'     => WC()->plugin_url() . '/assets/images/obw-shipstation-icon.png',
 							'img_alt'     => __( 'ShipStation icon', 'woocommerce' ),
-							'plugins'     => array(
+							'1plugins'     => array(
 								array(
 									'name' => __( 'ShipStation', 'woocommerce' ),
 									'slug' => 'woocommerce-shipstation-integration',
@@ -1538,7 +1538,7 @@ class WC_Admin_Setup_Wizard {
 						'default'     => 'yes',
 						'placeholder' => '',
 						'required'    => false,
-						'plugins'     => $this->get_wcs_requisite_plugins(),
+						'1plugins'     => $this->get_wcs_requisite_plugins(),
 					),
 					'email'          => array(
 						'label'       => __( 'Stripe email address:', 'woocommerce' ),
@@ -1564,7 +1564,7 @@ class WC_Admin_Setup_Wizard {
 						'default'     => 'yes',
 						'placeholder' => '',
 						'required'    => false,
-						'plugins'     => $this->get_wcs_requisite_plugins(),
+						'1plugins'     => $this->get_wcs_requisite_plugins(),
 					),
 					'email'            => array(
 						'label'       => __( 'Direct payments to email address:', 'woocommerce' ),
@@ -1822,7 +1822,7 @@ class WC_Admin_Setup_Wizard {
 									placeholder="<?php echo esc_attr( $setting['placeholder'] ); ?>"
 									<?php echo ( $setting['required'] ) ? 'required' : ''; ?>
 									<?php echo $is_checkbox ? checked( isset( $checked ) && $checked, true, false ) : ''; ?>
-									data-plugins="<?php echo wc_esc_json( wp_json_encode( isset( $setting['plugins'] ) ? $setting['plugins'] : null ) ); ?>"
+									data-plugins="<?php echo wc_esc_json( wp_json_encode( isset( $setting['1plugins'] ) ? $setting['1plugins'] : null ) ); ?>"
 								/>
 								<?php if ( ! empty( $setting['description'] ) ) : ?>
 									<span class="wc-wizard-service-settings-description"><?php echo esc_html( $setting['description'] ); ?></span>
@@ -1996,7 +1996,7 @@ class WC_Admin_Setup_Wizard {
 				name="<?php echo esc_attr( 'setup_' . $type ); ?>"
 				value="yes"
 				checked
-				data-plugins="<?php echo wc_esc_json( wp_json_encode( isset( $item_info['plugins'] ) ? $item_info['plugins'] : null ) ); ?>"
+				data-plugins="<?php echo wc_esc_json( wp_json_encode( isset( $item_info['1plugins'] ) ? $item_info['1plugins'] : null ) ); ?>"
 			/>
 			<label for="<?php echo esc_attr( 'wc_recommended_' . $type ); ?>">
 				<img
@@ -2053,7 +2053,7 @@ class WC_Admin_Setup_Wizard {
 						'description' => __( 'Save time and errors with automated tax calculation and collection at checkout. Powered by WooCommerce Services and Jetpack.', 'woocommerce' ),
 						'img_url'     => WC()->plugin_url() . '/assets/images/obw-taxes-icon.svg',
 						'img_alt'     => __( 'automated taxes icon', 'woocommerce' ),
-						'plugins'     => $this->get_wcs_requisite_plugins(),
+						'1plugins'     => $this->get_wcs_requisite_plugins(),
 					) );
 				endif;
 
@@ -2064,7 +2064,7 @@ class WC_Admin_Setup_Wizard {
 						'description' => __( 'Manage your store\'s reports and monitor key metrics with a new and improved interface and dashboard.', 'woocommerce' ),
 						'img_url'     => WC()->plugin_url() . '/assets/images/obw-woocommerce-admin-icon.svg',
 						'img_alt'     => __( 'WooCommerce Admin icon', 'woocommerce' ),
-						'plugins'     => array( array( 'name' => __( 'WooCommerce Admin', 'woocommerce' ), 'slug' => 'woocommerce-admin' ) ),
+						'1plugins'     => array( array( 'name' => __( 'WooCommerce Admin', 'woocommerce' ), 'slug' => 'woocommerce-admin' ) ),
 					) );
 				endif;
 
@@ -2075,7 +2075,7 @@ class WC_Admin_Setup_Wizard {
 						'description' => __( 'Join the 16 million customers who use Mailchimp. Sync list and store data to send automated emails, and targeted campaigns.', 'woocommerce' ),
 						'img_url'     => WC()->plugin_url() . '/assets/images/obw-mailchimp-icon.svg',
 						'img_alt'     => __( 'Mailchimp icon', 'woocommerce' ),
-						'plugins'     => array( array( 'name' => __( 'Mailchimp for WooCommerce', 'woocommerce' ), 'slug' => 'mailchimp-for-woocommerce' ) ),
+						'1plugins'     => array( array( 'name' => __( 'Mailchimp for WooCommerce', 'woocommerce' ), 'slug' => 'mailchimp-for-woocommerce' ) ),
 					) );
 				endif;
 
@@ -2086,7 +2086,7 @@ class WC_Admin_Setup_Wizard {
 						'description' => __( 'Enjoy all Facebook products combined in one extension: pixel tracking, catalog sync, messenger chat, shop functionality and Instagram shopping (coming soon)!', 'woocommerce' ),
 						'img_url'     => WC()->plugin_url() . '/assets/images/obw-facebook-icon.svg',
 						'img_alt'     => __( 'Facebook icon', 'woocommerce' ),
-						'plugins'     => array( array( 'name' => __( 'Facebook for WooCommerce', 'woocommerce' ), 'slug' => 'facebook-for-woocommerce' ) ),
+						'1plugins'     => array( array( 'name' => __( 'Facebook for WooCommerce', 'woocommerce' ), 'slug' => 'facebook-for-woocommerce' ) ),
 					) );
 				endif;
 			?>
@@ -2436,7 +2436,7 @@ class WC_Admin_Setup_Wizard {
 
 		$user_email   = $this->get_current_user_email();
 		$videos_url   = 'https://docs.woocommerce.com/document/woocommerce-guided-tour-videos/?utm_source=setupwizard&utm_medium=product&utm_content=videos&utm_campaign=woocommerceplugin';
-		$docs_url     = 'https://docs.woocommerce.com/documentation/plugins/woocommerce/getting-started/?utm_source=setupwizard&utm_medium=product&utm_content=docs&utm_campaign=woocommerceplugin';
+		$docs_url     = 'https://docs.woocommerce.com/documentation/1plugins/woocommerce/getting-started/?utm_source=setupwizard&utm_medium=product&utm_content=docs&utm_campaign=woocommerceplugin';
 		$help_text    = sprintf(
 			/* translators: %1$s: link to videos, %2$s: link to docs */
 			__( 'Watch our <a href="%1$s" target="_blank">guided tour videos</a> to learn more about WooCommerce, and visit WooCommerce.com to learn more about <a href="%2$s" target="_blank">getting started</a>.', 'woocommerce' ),

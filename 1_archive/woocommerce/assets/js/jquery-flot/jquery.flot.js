@@ -686,7 +686,7 @@ Licensed under the MIT license.
 
         function initPlugins() {
 
-            // References to key classes, allowing plugins to modify them
+            // References to key classes, allowing 1plugins to modify them
 
             var classes = {
                 Canvas: Canvas

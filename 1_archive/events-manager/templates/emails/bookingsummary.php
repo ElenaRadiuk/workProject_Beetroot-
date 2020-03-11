@@ -1,7 +1,7 @@
 <?php
 /*
 * This displays the content of the #_BOOKINGSUMMARY placeholder
-* You can override the default display settings pages by copying this file to yourthemefolder/plugins/events-manage/placeholders/ and modifying it however you need.
+* You can override the default display settings pages by copying this file to yourthemefolder/1plugins/events-manage/placeholders/ and modifying it however you need.
 * For more information, see http://wp-events-plugin.com/documentation/using-template-files/
 */
 /* @var $EM_Booking EM_Booking */ ?>
@@ -18,7 +18,7 @@
 
 =======================================
 
-<?php 
+<?php
 $price_summary = $EM_Booking->get_price_summary_array();
 //we should now have an array of information including base price, taxes and post/pre tax discounts
 ?>
@@ -53,7 +53,7 @@ $price_summary = $EM_Booking->get_price_summary_array();
 
 <?php foreach( $price_summary['discounts_post_tax'] as $discount_summary ): ?>
 <?php echo $discount_summary['name']; ?> : -<?php echo $discount_summary['amount']; ?>
- 
+
 <?php endforeach; ?>
 <?php endif; ?>
 <?php if( count($price_summary['surcharges_post_tax']) > 0 ): ?>
@@ -62,7 +62,7 @@ $price_summary = $EM_Booking->get_price_summary_array();
 
 <?php foreach( $price_summary['surcharges_post_tax'] as $surcharge_summary ): ?>
 <?php echo $surcharge_summary['name']; ?> : <?php echo $surcharge_summary['amount']; ?>
- 
+
 <?php endforeach; ?>
 <?php endif; ?>
 

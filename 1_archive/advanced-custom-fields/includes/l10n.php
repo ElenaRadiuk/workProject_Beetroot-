@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Determine the current locale desired for the request.
@@ -24,21 +24,21 @@ function determine_locale() {
 	if ( ! empty( $determined_locale ) && is_string( $determined_locale ) ) {
 		return $determined_locale;
 	}
-	
+
 	$determined_locale = get_locale();
-	
+
 	if ( function_exists('get_user_locale') && is_admin() ) {
 		$determined_locale = get_user_locale();
 	}
-	
+
 	if ( function_exists('get_user_locale') && isset( $_GET['_locale'] ) && 'user' === $_GET['_locale'] ) {
 		$determined_locale = get_user_locale();
 	}
-	
+
 	if ( ! empty( $_GET['wp_lang'] ) && ! empty( $GLOBALS['pagenow'] ) && 'wp-login.php' === $GLOBALS['pagenow'] ) {
 		$determined_locale = sanitize_text_field( $_GET['wp_lang'] );
 	}
-	
+
 	/**
 	 * Filters the locale for the current request.
 	 *
@@ -62,10 +62,10 @@ endif;
  * @return	string
  */
 function acf_get_locale() {
-	
+
 	// Determine local.
 	$locale = determine_locale();
-	
+
 	// Fallback to parent language for regions without translation.
 	// https://wpastra.com/docs/complete-list-wordpress-locale-codes/
 	$langs = array(
@@ -80,7 +80,7 @@ function acf_get_locale() {
 	if( isset($langs[ $locale ]) ) {
 		$locale = $langs[ $locale ];
 	}
-	
+
 	/**
 	 * Filters the determined local.
 	 *
@@ -104,7 +104,7 @@ function acf_get_locale() {
  * @return	void
  */
 function acf_load_textdomain( $domain = 'acf' ) {
-	
+
 	/**
 	 * Filters a plugin's locale.
 	 *
@@ -116,12 +116,12 @@ function acf_load_textdomain( $domain = 'acf' ) {
 	 */
 	$locale = apply_filters( 'plugin_locale', acf_get_locale(), $domain );
 	$mofile = $domain . '-' . $locale . '.mo';
-	
+
 	// Try to load from the languages directory first.
-	if( load_textdomain( $domain, WP_LANG_DIR . '/plugins/' . $mofile ) ) {
+	if( load_textdomain( $domain, WP_LANG_DIR . '/1plugins/' . $mofile ) ) {
 		return true;
 	}
-	
+
 	// Load from plugin lang folder.
 	return load_textdomain( $domain, acf_get_path( 'lang/' . $mofile ) );
 }
@@ -138,13 +138,13 @@ function acf_load_textdomain( $domain = 'acf' ) {
  * @return	string
  */
 function _acf_apply_language_cache_key( $key ) {
-	
+
 	// Get current language.
 	$current_language = acf_get_setting('current_language');
 	if( $current_language ) {
 		$key = "{$key}:{$current_language}";
 	}
-	
+
 	// Return key.
 	return $key;
 }

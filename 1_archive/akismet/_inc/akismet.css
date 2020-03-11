@@ -216,7 +216,7 @@ table.comments td.comment p a:after {
 }
 
 /**
- * For the activation notice on the plugins page.
+ * For the activation notice on the 1plugins page.
  */
 
 #akismet_setup_prompt {
@@ -324,7 +324,7 @@ table.comments td.comment p a:after {
 	.akismet_activate .aa_a {
 		display: none;
 	}
-	
+
 	.akismet_activate .aa_button_container {
 		width: 100%;
 	}
@@ -340,7 +340,7 @@ table.comments td.comment p a:after {
 	#akismet_setup_prompt .aa_description {
 		display: none;
 	}
-	
+
 	.akismet_activate {
 		min-width: 0;
 	}
@@ -519,7 +519,7 @@ table.comments td.comment p a:after {
 	width: 54px;
 	height: 54px;
 }
-	
+
 .akismet-box p:after {
 	content: ".";
 	display: block;

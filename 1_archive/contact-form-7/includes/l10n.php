@@ -13,7 +13,7 @@ function wpcf7_l10n() {
 
 	require_once( ABSPATH . 'wp-admin/includes/translation-install.php' );
 
-	$api = translations_api( 'plugins', array(
+	$api = translations_api( '1plugins', array(
 		'slug' => 'contact-form-7',
 		'version' => WPCF7_VERSION,
 	) );
@@ -87,7 +87,7 @@ function wpcf7_load_textdomain( $locale = null ) {
 		if ( $loaded = load_textdomain( $domain, $path . '/'. $mofile ) ) {
 			return $loaded;
 		} else {
-			$mofile = WP_LANG_DIR . '/plugins/' . $mofile;
+			$mofile = WP_LANG_DIR . '/1plugins/' . $mofile;
 			return load_textdomain( $domain, $mofile );
 		}
 

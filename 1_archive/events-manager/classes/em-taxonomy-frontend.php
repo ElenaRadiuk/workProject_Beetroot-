@@ -40,7 +40,7 @@ class EM_Taxonomy_Frontend {
 	public static function template($template = ''){
 		global $wp_query, $wp_the_query, $em_the_query, $post;
 		if( is_tax(self::$taxonomy_name) && !locate_template('taxonomy-'.self::$taxonomy_name.'.php') && get_option('dbem_cp_'. self::$option_name_plural .'_formats', true) ){
-			$em_the_query = $wp_the_query; //use this for situations where other plugins need to access 'original' query data, which you can switch back/forth.
+			$em_the_query = $wp_the_query; //use this for situations where other 1plugins need to access 'original' query data, which you can switch back/forth.
 			$EM_Taxonomy = $GLOBALS[self::$tax_class] = EM_Taxonomy_Term::get($wp_query->queried_object->term_id, self::$tax_class);
 			if( self::get_page_id() ){
 			    //less chance for things to go wrong with themes etc. so just reset the WP_Query to think it's a page rather than taxonomy
@@ -75,12 +75,12 @@ class EM_Taxonomy_Frontend {
 			}
 			//set taxonomy id to globals and query object
 			$em_taxonomy_property = 'em_'. self::$option_name .'_id';
-			$wp_query->{$em_taxonomy_property} = $wp_the_query->{$em_taxonomy_property} = $GLOBALS[$em_taxonomy_property] = $EM_Taxonomy->term_id; //we assign global taxononmy id just in case other themes/plugins do something out of the ordinary to WP_Query
+			$wp_query->{$em_taxonomy_property} = $wp_the_query->{$em_taxonomy_property} = $GLOBALS[$em_taxonomy_property] = $EM_Taxonomy->term_id; //we assign global taxononmy id just in case other themes/1plugins do something out of the ordinary to WP_Query
 			//set the template
 			$template = locate_template(array('page.php','index.php'),false); //category becomes a page
 			//sort out filters
 			add_filter('wp_head', 'EM_Taxonomy_Frontend::remove_em_the_content', 10000);
-			add_filter('the_content', array(self::$this_class,'the_content')); //come in slightly early and consider other plugins
+			add_filter('the_content', array(self::$this_class,'the_content')); //come in slightly early and consider other 1plugins
 			//Yoast WP SEO Tweals
 			if( defined('WPSEO_VERSION') ){
 				add_filter('wpseo_breadcrumb_links',array(self::$this_class,'wpseo_breadcrumb_links'));
@@ -164,7 +164,7 @@ class EM_Taxonomy_Frontend {
 		
 	/**
 	 * Switches the query back/forth from the original query if EM has interferred to add formatting for taxonomy pages.
-	 * Useful if you want plugins to temporarily access the old WP_Query which indicated we were looking at a taxonomy.
+	 * Useful if you want 1plugins to temporarily access the old WP_Query which indicated we were looking at a taxonomy.
 	 * For example, with WordPress SEO by Yoast, for wpseo_head we can switch at priority 1 and switch back at a really low priority so meta data is correctly generated.
 	 * @param string $template
 	 * @return string

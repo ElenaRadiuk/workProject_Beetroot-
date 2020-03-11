@@ -87,7 +87,7 @@ function em_bookings_event(){
   		<?php if( is_admin() ): ?></h1><?php endif; ?>
   			<a href="<?php echo $EM_Event->get_permalink(); ?>" class="<?php echo $header_button_classes; ?>"><?php echo sprintf(__('View %s','events-manager'), __('Event', 'events-manager')) ?></a>
   			<a href="<?php echo $EM_Event->get_edit_url(); ?>" class="<?php echo $header_button_classes; ?>"><?php echo sprintf(__('Edit %s','events-manager'), __('Event', 'events-manager')) ?></a>
-  			<?php if( locate_template('plugins/events-manager/templates/csv-event-bookings.php', false) ): //support for legacy template ?>
+  			<?php if( locate_template('1plugins/events-manager/templates/csv-event-bookings.php', false) ): //support for legacy template ?>
   			<a href='<?php echo EM_ADMIN_URL ."&amp;page=events-manager-bookings&amp;action=bookings_export_csv&amp;_wpnonce=".wp_create_nonce('bookings_export_csv')."&amp;event_id=".$EM_Event->event_id ?>' class="<?php echo $header_button_classes; ?>"><?php esc_html_e('Export CSV','events-manager')?></a>
   			<?php endif; ?>
   			<?php do_action('em_admin_event_booking_options_buttons'); ?>

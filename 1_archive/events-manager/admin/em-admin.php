@@ -10,7 +10,7 @@ function em_admin_menu(){
 			$bookings_pending_count += EM_Bookings::count(array('status'=>'0', 'blog'=>get_current_blog_id()));
 		}
 		if($bookings_pending_count > 0){
-			$bookings_num = '<span class="update-plugins count-'.$bookings_pending_count.'"><span class="plugin-count">'.$bookings_pending_count.'</span></span>';
+			$bookings_num = '<span class="update-1plugins count-'.$bookings_pending_count.'"><span class="plugin-count">'.$bookings_pending_count.'</span></span>';
 		}
    	}else{
    		$bookings_num = '';
@@ -21,17 +21,17 @@ function em_admin_menu(){
 	$events_pending_count = EM_Events::count(array('status'=>0, 'scope'=>'all', 'blog'=>get_current_blog_id()));
 	//TODO Add flexible permissions
 	if($events_pending_count > 0){
-		$events_num = '<span class="update-plugins count-'.$events_pending_count.'"><span class="plugin-count">'.$events_pending_count.'</span></span>';
+		$events_num = '<span class="update-1plugins count-'.$events_pending_count.'"><span class="plugin-count">'.$events_pending_count.'</span></span>';
 	}
 	//Count pending recurring events
 	$events_recurring_num = '';
 	$events_recurring_pending_count = EM_Events::count(array('status'=>0, 'recurring'=>1, 'scope'=>'all', 'blog'=>get_current_blog_id()));
 	//TODO Add flexible permissions
 	if($events_recurring_pending_count > 0){
-		$events_recurring_num = '<span class="update-plugins count-'.$events_recurring_pending_count.'"><span class="plugin-count">'.$events_recurring_pending_count.'</span></span>';
+		$events_recurring_num = '<span class="update-1plugins count-'.$events_recurring_pending_count.'"><span class="plugin-count">'.$events_recurring_pending_count.'</span></span>';
 	}
 	$both_pending_count = apply_filters('em_items_pending_count', $events_pending_count + $bookings_pending_count + $events_recurring_pending_count);
-	$both_num = ($both_pending_count > 0) ? '<span class="update-plugins count-'.$both_pending_count.'"><span class="plugin-count">'.$both_pending_count.'</span></span>':'';
+	$both_num = ($both_pending_count > 0) ? '<span class="update-1plugins count-'.$both_pending_count.'"><span class="plugin-count">'.$both_pending_count.'</span></span>':'';
   	// Add a submenu to the custom top-level menu:
    	$plugin_pages = array();
    	if( get_option('dbem_rsvp_enabled') ){
@@ -209,7 +209,7 @@ function em_admin_warnings() {
 			}else{
 				?>
 				<div id="message" class="updated">
-					<p><?php echo sprintf(__('It looks like you have WPML enabled on your site. We advise you also install our extra <a href="%s">Events Manager WPML Connector</a> plugin which helps the two work better together. <a href="%s">Dismiss message</a>','events-manager'),'http://wordpress.org/extend/plugins/events-manager-wpml/', esc_url(add_query_arg(array('disable_em_wpml_warning'=>1)))); ?></p>
+					<p><?php echo sprintf(__('It looks like you have WPML enabled on your site. We advise you also install our extra <a href="%s">Events Manager WPML Connector</a> plugin which helps the two work better together. <a href="%s">Dismiss message</a>','events-manager'),'http://wordpress.org/extend/1plugins/events-manager-wpml/', esc_url(add_query_arg(array('disable_em_wpml_warning'=>1)))); ?></p>
 				</div>
 				<?php
 			}
@@ -237,7 +237,7 @@ function em_admin_warnings() {
 add_action ( 'admin_notices', 'em_admin_warnings', 100 );
 
 /**
- * Settings link in the plugins page menu
+ * Settings link in the 1plugins page menu
  * @param array $links
  * @param string $file
  * @return array
@@ -265,7 +265,7 @@ function em_updates_check( $transient ) {
     //only bother if we're checking for dev versions
     if( get_option('em_check_dev_version') || get_option('dbem_pro_dev_updates') ){     
 	    //check WP repo for trunk version
-	    $request = wp_remote_get('http://plugins.svn.wordpress.org/events-manager/trunk/events-manager.php');
+	    $request = wp_remote_get('http://1plugins.svn.wordpress.org/events-manager/trunk/events-manager.php');
 	    
 	    if( !is_wp_error($request) ){
 		    preg_match('/Version: ([0-9a-z\.]+)/', $request['body'], $matches);
@@ -276,7 +276,7 @@ function em_updates_check( $transient ) {
 			    	$response = new stdClass();
 			    	$response->slug = EM_SLUG;
 					$response->new_version = $matches[1] ;
-			        $response->url = 'http://wordpress.org/extend/plugins/events-manager/';
+			        $response->url = 'http://wordpress.org/extend/1plugins/events-manager/';
 				    $response->package = 'http://downloads.wordpress.org/plugin/events-manager.zip';
 			       	$transient->response[EM_SLUG] = $response;
 			    }

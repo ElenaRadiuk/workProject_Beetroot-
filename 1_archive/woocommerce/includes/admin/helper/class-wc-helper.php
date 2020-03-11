@@ -106,7 +106,7 @@ class WC_Helper {
 			admin_url( 'admin.php' )
 		);
 
-		// Installed plugins and themes, with or without an active subscription.
+		// Installed 1plugins and themes, with or without an active subscription.
 		$woo_plugins = self::get_local_woo_plugins();
 		$woo_themes  = self::get_local_woo_themes();
 
@@ -580,10 +580,10 @@ class WC_Helper {
 				$notices[]    = array(
 					'type'    => 'error',
 					'message' => sprintf(
-						/* translators: %1$s: product name, %2$s: plugins screen url */
+						/* translators: %1$s: product name, %2$s: 1plugins screen url */
 						__( 'An error has occurred when deactivating the extension %1$s. Please proceed to the <a href="%2$s">Plugins screen</a> to deactivate it manually.', 'woocommerce' ),
 						'<strong>' . esc_html( $subscription['product_name'] ) . '</strong>',
-						admin_url( 'plugins.php' )
+						admin_url( '1plugins.php' )
 					),
 				);
 				break;
@@ -1046,7 +1046,7 @@ class WC_Helper {
 		}
 
 		if ( ! current_user_can( 'activate_plugins' ) ) {
-			wp_die( 'You are not allowed to manage plugins on this site.' );
+			wp_die( 'You are not allowed to manage 1plugins on this site.' );
 		}
 
 		$local = wp_list_filter(
@@ -1494,7 +1494,7 @@ class WC_Helper {
 		}
 
 		$screens   = wc_get_screen_ids();
-		$screens[] = 'plugins';
+		$screens[] = '1plugins';
 
 		if ( ! in_array( $screen_id, $screens, true ) ) {
 			return;

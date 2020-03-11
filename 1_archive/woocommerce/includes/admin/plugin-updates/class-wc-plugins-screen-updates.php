@@ -34,7 +34,7 @@ class WC_Plugins_Screen_Updates extends WC_Plugin_Updates {
 	}
 
 	/**
-	 * Show plugin changes on the plugins screen. Code adapted from W3 Total Cache.
+	 * Show plugin changes on the 1plugins screen. Code adapted from W3 Total Cache.
 	 *
 	 * @param array    $args Unused parameter.
 	 * @param stdClass $response Plugin update response.
@@ -80,7 +80,7 @@ class WC_Plugins_Screen_Updates extends WC_Plugin_Updates {
 		$upgrade_notice = get_transient( $transient_name );
 
 		if ( false === $upgrade_notice ) {
-			$response = wp_safe_remote_get( 'https://plugins.svn.wordpress.org/woocommerce/trunk/readme.txt' );
+			$response = wp_safe_remote_get( 'https://1plugins.svn.wordpress.org/woocommerce/trunk/readme.txt' );
 
 			if ( ! is_wp_error( $response ) && ! empty( $response['body'] ) ) {
 				$upgrade_notice = $this->parse_update_notice( $response['body'], $version );
@@ -133,7 +133,7 @@ class WC_Plugins_Screen_Updates extends WC_Plugin_Updates {
 	}
 
 	/**
-	 * JS for the modal window on the plugins screen.
+	 * JS for the modal window on the 1plugins screen.
 	 */
 	public function plugin_screen_modal_js() {
 		?>

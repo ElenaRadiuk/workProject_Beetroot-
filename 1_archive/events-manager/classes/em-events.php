@@ -107,7 +107,7 @@ class EM_Events extends EM_Object {
 				}
 			}
 		}else{ $join_locations = true; }//end temporary if( !empty($args['groupby']).... wrapper
-		//plugins can override this optional joining behaviour here in case they add custom WHERE conditions or something like that
+		//1plugins can override this optional joining behaviour here in case they add custom WHERE conditions or something like that
 		$join_locations = apply_filters('em_events_get_join_locations_table', $join_locations, $args, $count);
 		//depending on whether to join we do certain things like add a join SQL, change specific values like status search
 		$location_optional_join = $join_locations ? "LEFT JOIN $locations_table ON {$locations_table}.location_id={$events_table}.location_id" : '';
@@ -514,7 +514,7 @@ $limit $offset";
 	}
 
 	/* Overrides EM_Object method to apply a filter to result
-	 * @see wp-content/plugins/events-manager/classes/EM_Object#build_sql_conditions()
+	 * @see wp-content/1plugins/events-manager/classes/EM_Object#build_sql_conditions()
 	 */
 	public static function build_sql_conditions( $args = array() ){
 		global $wpdb;

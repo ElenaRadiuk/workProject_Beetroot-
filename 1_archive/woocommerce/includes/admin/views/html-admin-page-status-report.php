@@ -288,7 +288,7 @@ $untested_plugins   = $plugin_updates->get_untested_plugins( WC()->version, 'min
 		</tr>
 		<tr>
 			<td data-export-label="fsockopen/cURL"><?php esc_html_e( 'fsockopen/cURL', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Payment gateways can use cURL to communicate with remote servers to authorize payments, other plugins may also use it when communicating with remote services.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Payment gateways can use cURL to communicate with remote servers to authorize payments, other 1plugins may also use it when communicating with remote services.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['fsockopen_or_curl_enabled'] ) {
@@ -308,7 +308,7 @@ $untested_plugins   = $plugin_updates->get_untested_plugins( WC()->version, 'min
 					echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>';
 				} else {
 					/* Translators: %s classname and link. */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( 'Your server does not have the %s class enabled - some gateway plugins which use SOAP may not work as expected.', 'woocommerce' ), '<a href="https://php.net/manual/en/class.soapclient.php">SoapClient</a>' ) . '</mark>';
+					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( 'Your server does not have the %s class enabled - some gateway 1plugins which use SOAP may not work as expected.', 'woocommerce' ), '<a href="https://php.net/manual/en/class.soapclient.php">SoapClient</a>' ) . '</mark>';
 				}
 				?>
 			</td>
@@ -371,7 +371,7 @@ $untested_plugins   = $plugin_updates->get_untested_plugins( WC()->version, 'min
 		</tr>
 		<tr>
 			<td data-export-label="Remote Get"><?php esc_html_e( 'Remote get', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'WooCommerce plugins may use this method of communication when checking for plugin updates.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'WooCommerce 1plugins may use this method of communication when checking for plugin updates.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['remote_get_successful'] ) {
@@ -560,7 +560,7 @@ $untested_plugins   = $plugin_updates->get_untested_plugins( WC()->version, 'min
 <table class="wc_status_table widefat" cellspacing="0">
 	<thead>
 		<tr>
-			<th colspan="3" data-export-label="Active Plugins (<?php echo count( $active_plugins ); ?>)"><h2><?php esc_html_e( 'Active plugins', 'woocommerce' ); ?> (<?php echo count( $active_plugins ); ?>)</h2></th>
+			<th colspan="3" data-export-label="Active Plugins (<?php echo count( $active_plugins ); ?>)"><h2><?php esc_html_e( 'Active 1plugins', 'woocommerce' ); ?> (<?php echo count( $active_plugins ); ?>)</h2></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -612,7 +612,7 @@ $untested_plugins   = $plugin_updates->get_untested_plugins( WC()->version, 'min
 <table class="wc_status_table widefat" cellspacing="0">
 	<thead>
 		<tr>
-			<th colspan="3" data-export-label="Inactive Plugins (<?php echo count( $inactive_plugins ); ?>)"><h2><?php esc_html_e( 'Inactive plugins', 'woocommerce' ); ?> (<?php echo count( $inactive_plugins ); ?>)</h2></th>
+			<th colspan="3" data-export-label="Inactive Plugins (<?php echo count( $inactive_plugins ); ?>)"><h2><?php esc_html_e( 'Inactive 1plugins', 'woocommerce' ); ?> (<?php echo count( $inactive_plugins ); ?>)</h2></th>
 		</tr>
 	</thead>
 	<tbody>

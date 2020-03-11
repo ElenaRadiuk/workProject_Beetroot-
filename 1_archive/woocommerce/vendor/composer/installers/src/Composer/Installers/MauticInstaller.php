@@ -4,12 +4,12 @@ namespace Composer\Installers;
 class MauticInstaller extends BaseInstaller
 {
     protected $locations = array(
-        'plugin' => 'plugins/{$name}/',
+        'plugin' => '1plugins/{$name}/',
         'theme' => 'themes/{$name}/',
     );
 
     /**
-     * Format package name of mautic-plugins to CamelCase
+     * Format package name of mautic-1plugins to CamelCase
      */
     public function inflectPackageVars($vars)
     {

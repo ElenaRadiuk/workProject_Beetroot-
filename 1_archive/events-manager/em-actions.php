@@ -78,7 +78,7 @@ function em_init_actions() {
 		if( $_REQUEST['action'] == 'event_save' && $EM_Event->can_manage('edit_events','edit_others_events') ){
 			//Check Nonces
 			if( !wp_verify_nonce($_REQUEST['_wpnonce'], 'wpnonce_event_save') ) exit('Trying to perform an illegal action.');
-			//Set server timezone to UTC in case other plugins are doing something naughty
+			//Set server timezone to UTC in case other 1plugins are doing something naughty
 			$server_timezone = date_default_timezone_get();
 			date_default_timezone_set('UTC');
 			//Grab and validate submitted data

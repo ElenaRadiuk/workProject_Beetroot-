@@ -67,7 +67,7 @@ class EM_Event_Post_Admin{
 	
 	/**
 	 * Validate event once BEFORE it goes into the database, because otherwise it could get 'published' between now and save_post, 
-	 * allowing other plugins hooking here to perform incorrect actions e.g. tweet a new event.
+	 * allowing other 1plugins hooking here to perform incorrect actions e.g. tweet a new event.
 	 *  
 	 * @param array $data
 	 * @param array $postarr
@@ -106,7 +106,7 @@ class EM_Event_Post_Admin{
 		$saving_status = !in_array(get_post_status($post_id), array('trash','auto-draft')) && !defined('DOING_AUTOSAVE') && !$doing_add_meta_ajax;
 		$EM_EVENT_SAVE_POST = true; //first filter for save_post in EM for events
 		if(!defined('UNTRASHING_'.$post_id) && $is_post_type && $saving_status ){
-			//Reset server timezone to UTC in case other plugins are doing something naughty
+			//Reset server timezone to UTC in case other 1plugins are doing something naughty
 			$server_timezone = date_default_timezone_get();
 			date_default_timezone_set('UTC');
 			//grab event, via post info, reset the $EM_Event variable
@@ -404,7 +404,7 @@ class EM_Event_Recurring_Post_Admin{
 	}
 	
 	/**
-	 * Beacuse in wp admin recurrences get saved early on during save_post, meta added by  other plugins to the recurring event template don't get copied over to recurrences
+	 * Beacuse in wp admin recurrences get saved early on during save_post, meta added by  other 1plugins to the recurring event template don't get copied over to recurrences
 	 * This re-saves meta late in save_post to correct this issue, in the future when recurrences refer to one post, this shouldn't be an issue 
 	 * @param int $post_id
 	 */

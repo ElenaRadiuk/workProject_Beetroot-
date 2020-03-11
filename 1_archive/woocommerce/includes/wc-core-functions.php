@@ -188,7 +188,7 @@ function wc_get_template_part( $slug, $name = '' ) {
 		wp_cache_set( $cache_key, $template, 'woocommerce' );
 	}
 
-	// Allow 3rd party plugins to filter template file from their plugin.
+	// Allow 3rd party 1plugins to filter template file from their plugin.
 	$template = apply_filters( 'wc_get_template_part', $template, $slug, $name );
 
 	if ( $template ) {

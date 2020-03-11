@@ -370,7 +370,7 @@
 					<?php echo sprintf(__('%s can be displayed just like normal WordPress custom taxonomies in an archive-style format, however Events Manager by default allows you to completely change the standard look of these archives and use our own <a href="%s">custom formatting</a> methods.','events-manager'), __('Event Categories','events-manager'), EM_ADMIN_URL .'&amp;page=events-manager-help#event-placeholders'); ?>
 				</p>
 				<p>
-					<?php echo sprintf(__('Due to how we change how this custom taxonomy is displayed when overriding with formats it is strongly advised that you assign a %s page below, which increases compatibility with various plugins and themes.','events-manager'), __('categories','events-manager')); ?>
+					<?php echo sprintf(__('Due to how we change how this custom taxonomy is displayed when overriding with formats it is strongly advised that you assign a %s page below, which increases compatibility with various 1plugins and themes.','events-manager'), __('categories','events-manager')); ?>
 					<?php sprintf(__('<a href="%s">See some more information</a> on how %s work when overriding with formats.','events-manager'), '#', __('categories','events-manager')); //not ready yet, but make translatable ?>
 				</p>
 			</div>
@@ -504,7 +504,7 @@
 					<?php echo sprintf(__('%s can be displayed just like normal WordPress custom taxonomies in an archive-style format, however Events Manager by default allows you to completely change the standard look of these archives and use our own <a href="%s">custom formatting</a> methods.','events-manager'), __('Event Tags','events-manager'), EM_ADMIN_URL .'&amp;page=events-manager-help#event-placeholders'); ?>
 				</p>
 				<p>
-					<?php echo sprintf(__('Due to how we change how this custom taxonomy is displayed when overriding with formats it is strongly advised that you assign a %s page below, which increases compatibility with various plugins and themes.','events-manager'), __('tags','events-manager')); ?>
+					<?php echo sprintf(__('Due to how we change how this custom taxonomy is displayed when overriding with formats it is strongly advised that you assign a %s page below, which increases compatibility with various 1plugins and themes.','events-manager'), __('tags','events-manager')); ?>
 					<?php sprintf(__('<a href="%s">See some more information</a> on how %s work when overriding with formats.','events-manager'), '#', __('tags','events-manager')); //not ready yet, but make translatable ?>
 				</p>
 			</div>

@@ -2120,7 +2120,7 @@ class EM_Event extends EM_Object{
 				case '#_REMOVEBOOKINGFORM': //deprecated
 				case '#_BOOKINGFORM':
 					if( get_option('dbem_rsvp_enabled')){
-						if( !defined('EM_XSS_BOOKINGFORM_FILTER') && locate_template('plugins/events-manager/placeholders/bookingform.php') ){
+						if( !defined('EM_XSS_BOOKINGFORM_FILTER') && locate_template('1plugins/events-manager/placeholders/bookingform.php') ){
 							//xss fix for old overridden booking forms
 							add_filter('em_booking_form_action_url','esc_url');
 							define('EM_XSS_BOOKINGFORM_FILTER',true);
@@ -3250,5 +3250,5 @@ function em_event_gallery_override_init(){
 	remove_shortcode('gallery');
 	add_shortcode('gallery', 'em_event_gallery_override');
 }
-add_action('init','em_event_gallery_override_init', 1000); //so that plugins like JetPack don't think we're overriding gallery, we're not i swear!
+add_action('init','em_event_gallery_override_init', 1000); //so that 1plugins like JetPack don't think we're overriding gallery, we're not i swear!
 ?>

@@ -212,7 +212,7 @@
             <table class="form-table">
             <tr class="em-header"><td colspan="2">
             	<h4><?php _e('JavaScript Files','events-manager'); ?></h4>
-            	<p><?php echo sprintf(__('If you are not using it already, we recommend you try the <a href="%s" target="_blank">Use Google Libraries</a> plugin, because without further optimization options below it already significantly reduces the number of files needed to display your Event pages and will most likely speed up your overall website loading time.' ,'events-manager'),'http://wordpress.org/extend/plugins/use-google-libraries/'); ?>
+            	<p><?php echo sprintf(__('If you are not using it already, we recommend you try the <a href="%s" target="_blank">Use Google Libraries</a> plugin, because without further optimization options below it already significantly reduces the number of files needed to display your Event pages and will most likely speed up your overall website loading time.' ,'events-manager'),'http://wordpress.org/extend/1plugins/use-google-libraries/'); ?>
 			</td></tr>
 			<?php
 				em_options_radio_binary ( __( 'Limit JS file loading?', 'events-manager'), 'dbem_js_limit', __( 'Prevent unnecessary loading of JavaScript files on pages where they are not needed.', 'events-manager') );
@@ -252,7 +252,7 @@
 			    <h4><?php  _e('Thumbnails','events-manager');  ?></h4>  
 			</td></tr>  
 			<?php
-            em_options_radio_binary  (  __(  'Disable  WordPress Thumbnails?',  'events-manager'),  'dbem_disable_thumbnails',  __(  'If set to yes, full sized images will be used and HTML width and height attributes will be used to determine the size.',  'events-manager').' '.sprintf(__('Setting this to yes will also make your images crop efficiently with the %s feature in the %s plugin.','events-manager'), '<a href="http://jetpack.me/support/photon/">Photon</a>','<a href="https://wordpress.org/plugins/jetpack/">JetPack</a>') );  
+            em_options_radio_binary  (  __(  'Disable  WordPress Thumbnails?',  'events-manager'),  'dbem_disable_thumbnails',  __(  'If set to yes, full sized images will be used and HTML width and height attributes will be used to determine the size.',  'events-manager').' '.sprintf(__('Setting this to yes will also make your images crop efficiently with the %s feature in the %s plugin.','events-manager'), '<a href="http://jetpack.me/support/photon/">Photon</a>','<a href="https://wordpress.org/1plugins/jetpack/">JetPack</a>') );  
             ?>  
 	        <?php echo $save_button; ?>
 		</table>

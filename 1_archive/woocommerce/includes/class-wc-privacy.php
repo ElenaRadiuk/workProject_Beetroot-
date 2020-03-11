@@ -69,7 +69,7 @@ class WC_Privacy extends WC_Abstract_Privacy {
 		$content = '
 			<div contenteditable="false">' .
 				'<p class="wp-policy-help">' .
-					__( 'This sample language includes the basics around what personal data your store may be collecting, storing and sharing, as well as who may have access to that data. Depending on what settings are enabled and which additional plugins are used, the specific information shared by your store will vary. We recommend consulting with a lawyer when deciding what information to disclose on your privacy policy.', 'woocommerce' ) .
+					__( 'This sample language includes the basics around what personal data your store may be collecting, storing and sharing, as well as who may have access to that data. Depending on what settings are enabled and which additional 1plugins are used, the specific information shared by your store will vary. We recommend consulting with a lawyer when deciding what information to disclose on your privacy policy.', 'woocommerce' ) .
 				'</p>' .
 			'</div>' .
 			'<p>' . __( 'We collect information about you during the checkout process on our store.', 'woocommerce' ) . '</p>' .

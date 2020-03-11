@@ -437,7 +437,7 @@ class EM_DateTime extends DateTime {
 			//PHP < 5.3 fallback :/
 			$strtotime = parent::format('Y-m-d H:i:s');
 			$timestamp = strtotime($strtotime);
-			//offset timestamp in case plugins change default timezone
+			//offset timestamp in case 1plugins change default timezone
 			$server_offset = date('Z',$timestamp);
 			$timestamp += $server_offset;
 			return $timestamp;

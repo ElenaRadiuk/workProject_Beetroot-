@@ -158,9 +158,9 @@ final class WooCommerce {
 	}
 
 	/**
-	 * When WP has loaded all plugins, trigger the `woocommerce_loaded` hook.
+	 * When WP has loaded all 1plugins, trigger the `woocommerce_loaded` hook.
 	 *
-	 * This ensures `woocommerce_loaded` is called only after all other plugins
+	 * This ensures `woocommerce_loaded` is called only after all other 1plugins
 	 * are loaded, to avoid issues caused by plugin directory naming changing
 	 * the load order. See #21524 for details.
 	 *
@@ -533,7 +533,7 @@ final class WooCommerce {
 	}
 
 	/**
-	 * Function used to Init WooCommerce Template Functions - This makes them pluggable by plugins and themes.
+	 * Function used to Init WooCommerce Template Functions - This makes them pluggable by 1plugins and themes.
 	 */
 	public function include_template_functions() {
 		include_once WC_ABSPATH . 'includes/wc-template-functions.php';
@@ -576,7 +576,7 @@ final class WooCommerce {
 	 *
 	 * Locales found in:
 	 *      - WP_LANG_DIR/woocommerce/woocommerce-LOCALE.mo
-	 *      - WP_LANG_DIR/plugins/woocommerce-LOCALE.mo
+	 *      - WP_LANG_DIR/1plugins/woocommerce-LOCALE.mo
 	 */
 	public function load_plugin_textdomain() {
 		if ( function_exists( 'determine_locale' ) ) {
@@ -877,7 +877,7 @@ final class WooCommerce {
 		$message_two = sprintf(
 			/* translators: 1: URL of WordPress.org Repository 2: URL of the GitHub Repository release page */
 			__( 'Or you can download a pre-built version of the plugin from the <a href="%1$s">WordPress.org repository</a> or by visiting <a href="%2$s">the releases page in the GitHub repository</a>.', 'woocommerce' ),
-			'https://wordpress.org/plugins/woocommerce/',
+			'https://wordpress.org/1plugins/woocommerce/',
 			'https://github.com/woocommerce/woocommerce/releases'
 		);
 		printf( '<div class="error"><p>%s %s</p></div>', $message_one, $message_two ); /* WPCS: xss ok. */

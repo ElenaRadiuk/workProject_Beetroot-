@@ -8850,7 +8850,7 @@ msgid "Jetpack"
 msgstr ""
 
 #: includes/admin/class-wc-admin-setup-wizard.php:916
-msgid "The following plugins will be installed and activated for you:"
+msgid "The following 1plugins will be installed and activated for you:"
 msgstr ""
 
 #: includes/admin/class-wc-admin-setup-wizard.php:932
@@ -9837,7 +9837,7 @@ msgid "The extension %s has been deactivated successfully."
 msgstr ""
 
 #: includes/admin/helper/class-wc-helper.php:584
-#. translators: %1$s: product name, %2$s: plugins screen url
+#. translators: %1$s: product name, %2$s: 1plugins screen url
 msgid ""
 "An error has occurred when deactivating the extension %1$s. Please proceed "
 "to the <a href=\"%2$s\">Plugins screen</a> to deactivate it manually."
@@ -12391,14 +12391,14 @@ msgstr ""
 #: includes/admin/plugin-updates/class-wc-plugin-updates.php:120
 #. translators: %s: version number
 msgid ""
-"<strong>Heads up!</strong> The versions of the following plugins you're "
+"<strong>Heads up!</strong> The versions of the following 1plugins you're "
 "running haven't been tested with the latest version of WooCommerce (%s)."
 msgstr ""
 
 #: includes/admin/plugin-updates/class-wc-plugin-updates.php:143
 #. translators: %s: version number
 msgid ""
-"<strong>Heads up!</strong> The versions of the following plugins you're "
+"<strong>Heads up!</strong> The versions of the following 1plugins you're "
 "running haven't been tested with WooCommerce %s. Please update them or "
 "confirm compatibility before updating WooCommerce, or you may experience "
 "issues:"
@@ -15259,7 +15259,7 @@ msgstr ""
 #: includes/admin/views/html-admin-page-status-report.php:291
 msgid ""
 "Payment gateways can use cURL to communicate with remote servers to "
-"authorize payments, other plugins may also use it when communicating with "
+"authorize payments, other 1plugins may also use it when communicating with "
 "remote services."
 msgstr ""
 
@@ -15284,7 +15284,7 @@ msgstr ""
 #: includes/admin/views/html-admin-page-status-report.php:311
 #. Translators: %s classname and link.
 msgid ""
-"Your server does not have the %s class enabled - some gateway plugins which "
+"Your server does not have the %s class enabled - some gateway 1plugins which "
 "use SOAP may not work as expected."
 msgstr ""
 
@@ -15357,7 +15357,7 @@ msgstr ""
 
 #: includes/admin/views/html-admin-page-status-report.php:374
 msgid ""
-"WooCommerce plugins may use this method of communication when checking for "
+"WooCommerce 1plugins may use this method of communication when checking for "
 "plugin updates."
 msgstr ""
 
@@ -15461,7 +15461,7 @@ msgid "Error messages should not be shown to visitors."
 msgstr ""
 
 #: includes/admin/views/html-admin-page-status-report.php:563
-msgid "Active plugins"
+msgid "Active 1plugins"
 msgstr ""
 
 #: includes/admin/views/html-admin-page-status-report.php:575
@@ -15491,7 +15491,7 @@ msgid "Not tested with the active version of WooCommerce"
 msgstr ""
 
 #: includes/admin/views/html-admin-page-status-report.php:615
-msgid "Inactive plugins"
+msgid "Inactive 1plugins"
 msgstr ""
 
 #: includes/admin/views/html-admin-page-status-report.php:670
@@ -17899,7 +17899,7 @@ msgid ""
 "This sample language includes the basics around what personal data your "
 "store may be collecting, storing and sharing, as well as who may have "
 "access to that data. Depending on what settings are enabled and which "
-"additional plugins are used, the specific information shared by your store "
+"additional 1plugins are used, the specific information shared by your store "
 "will vary. We recommend consulting with a lawyer when deciding what "
 "information to disclose on your privacy policy."
 msgstr ""
@@ -23965,7 +23965,7 @@ msgstr ""
 #: packages/woocommerce-blocks/vendor/autoload_packages.php:100
 #: packages/woocommerce-blocks/vendor/automattic/jetpack-autoloader/src/autoload.php:100
 #. translators: %s Name of a PHP Class
-msgid "Not all plugins have loaded yet but we requested the class %s"
+msgid "Not all 1plugins have loaded yet but we requested the class %s"
 msgstr ""
 
 #: packages/woocommerce-blocks/woocommerce-gutenberg-products-block.php:55
@@ -27126,15 +27126,15 @@ msgid "Database tables."
 msgstr ""
 
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-v2-controller.php:324
-msgid "Active plugins."
+msgid "Active 1plugins."
 msgstr ""
 
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-v2-controller.php:333
-msgid "Inactive plugins."
+msgid "Inactive 1plugins."
 msgstr ""
 
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-v2-controller.php:342
-msgid "Dropins & MU plugins."
+msgid "Dropins & MU 1plugins."
 msgstr ""
 
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-v2-controller.php:351

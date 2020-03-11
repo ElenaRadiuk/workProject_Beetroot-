@@ -4,8 +4,8 @@ namespace Composer\Installers;
 class HuradInstaller extends BaseInstaller
 {
     protected $locations = array(
-        'plugin' => 'plugins/{$name}/',
-        'theme' => 'plugins/{$name}/',
+        'plugin' => '1plugins/{$name}/',
+        'theme' => '1plugins/{$name}/',
     );
 
     /**

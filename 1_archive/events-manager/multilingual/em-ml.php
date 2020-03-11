@@ -1,6 +1,6 @@
 <?php
 /**
- * Abstract layer allowing for certain aspects of Events Manager to be translateable. Useful for translation plugins to hook into.
+ * Abstract layer allowing for certain aspects of Events Manager to be translateable. Useful for translation 1plugins to hook into.
  */
 class EM_ML{
     /**
@@ -40,7 +40,7 @@ class EM_ML{
 	public static function init(){
 	    if( !empty(self::$init) ) return;
 		
-		//Determine the available languages and the currently displayed locale for this site. 3rd party plugins need to override these filters.
+		//Determine the available languages and the currently displayed locale for this site. 3rd party 1plugins need to override these filters.
 		self::$langs = apply_filters('em_ml_langs', array());
 		self::$wplang = apply_filters('em_ml_wplang', get_locale());
 		self::$current_language = !empty($_REQUEST['em_lang']) && array_key_exists($_REQUEST['em_lang'], self::$langs) ? $_REQUEST['em_lang'] : get_locale();
@@ -375,7 +375,7 @@ class EM_ML{
 				$result = !$object->translation;
 			}
 		}
-		// if $result is passed as null then it can be assuemd we could not determine originality and multilingual plugins should decide
+		// if $result is passed as null then it can be assuemd we could not determine originality and multilingual 1plugins should decide
 		$result = apply_filters('em_ml_is_original', $result, $object);
 		return $result === null || $result;
 	}
@@ -502,4 +502,4 @@ class EM_ML{
 		}
 	}
 }
-add_action('init','EM_ML::init'); //other plugins may want to do this before we do, that's ok!
+add_action('init','EM_ML::init'); //other 1plugins may want to do this before we do, that's ok!

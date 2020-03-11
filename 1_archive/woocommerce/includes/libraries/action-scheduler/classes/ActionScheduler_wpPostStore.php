@@ -79,7 +79,7 @@ class ActionScheduler_wpPostStore extends ActionScheduler_Store {
 	 * post from the Edit Post screen. It becomes a bottleneck when automatically processing thousands of actions, with a
 	 * database containing thousands of related post_name values.
 	 *
-	 * WordPress 5.1 introduces the 'pre_wp_unique_post_slug' filter for plugins to address this issue.
+	 * WordPress 5.1 introduces the 'pre_wp_unique_post_slug' filter for 1plugins to address this issue.
 	 *
 	 * We can short-circuit WordPress's wp_unique_post_slug() approach using the 'pre_wp_unique_post_slug' filter. This
 	 * method is available to be used as a callback on that filter. It provides a more scalable approach to generating a

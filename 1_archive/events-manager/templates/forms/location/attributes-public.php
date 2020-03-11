@@ -1,7 +1,7 @@
 <?php
 /*
  * This file is called by templates/forms/location-editor.php to display attribute fields on your location form on your website.
- * You can override this file by copying it to /wp-content/themes/yourtheme/plugins/events-manager/forms/location/ and editing it there.
+ * You can override this file by copying it to /wp-content/themes/yourtheme/1plugins/events-manager/forms/location/ and editing it there.
  */
 global $EM_Location;
 /* @var $EM_Location EM_Location */

@@ -242,7 +242,7 @@ class WC_Tracker {
 	}
 
 	/**
-	 * Get all plugins grouped into activated or not.
+	 * Get all 1plugins grouped into activated or not.
 	 *
 	 * @return array
 	 */
@@ -273,7 +273,7 @@ class WC_Tracker {
 				$formatted['plugin_uri'] = strip_tags( $v['PluginURI'] );
 			}
 			if ( in_array( $k, $active_plugins_keys ) ) {
-				// Remove active plugins from list so we can show active and inactive separately.
+				// Remove active 1plugins from list so we can show active and inactive separately.
 				unset( $plugins[ $k ] );
 				$active_plugins[ $k ] = $formatted;
 			} else {

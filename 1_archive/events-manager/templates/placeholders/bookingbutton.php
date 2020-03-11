@@ -1,6 +1,6 @@
 <?php
 /*
- * You can override this by copying this file to wp-content/themesyourthemefolder/plugins/events-manager/placeholders/ and modifying it however you need.
+ * You can override this by copying this file to wp-content/themesyourthemefolder/1plugins/events-manager/placeholders/ and modifying it however you need.
  * There are a few variables made available to you:
  * 
  * $EM_Event - EM_Event object 

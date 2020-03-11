@@ -51,7 +51,7 @@ jQuery( function ( $ ) {
 						var value_array = the_value.split( ', ' );
 
 						if ( value_array.length > 1 ) {
-							// If value have a list of plugins ','.
+							// If value have a list of 1plugins ','.
 							// Split to add new line.
 							var temp_line ='';
 							$.each( value_array, function( key, line ) {

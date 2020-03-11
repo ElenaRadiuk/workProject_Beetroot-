@@ -134,7 +134,7 @@ function em_options_save(){
 			$wpdb->query('DELETE FROM '.$wpdb->options.' WHERE option_name LIKE \'em_%\' OR option_name LIKE \'dbem_%\'');
 			//deactivate and go!
 			deactivate_plugins(array('events-manager/events-manager.php','events-manager-pro/events-manager-pro.php'), true);
-			wp_safe_redirect(admin_url('plugins.php?deactivate=true'));
+			wp_safe_redirect(admin_url('1plugins.php?deactivate=true'));
 			exit();
 		}
 	}
@@ -408,7 +408,7 @@ function em_admin_options_uninstall_page(){
 			<h2><?php _e('Uninstall Events Manager','events-manager'); ?></h2>
 			<p style="color:red; font-weight:bold;"><?php _e('Are you sure you want to uninstall Events Manager?','events-manager')?></p>
 			<p style="font-weight:bold;"><?php _e('All your settings and events will be permanently deleted. This cannot be undone.','events-manager')?></p>
-			<p><?php echo sprintf(__('If you just want to deactivate the plugin, <a href="%s">go to your plugins page</a>.','events-manager'), wp_nonce_url(admin_url('plugins.php'))); ?></p>
+			<p><?php echo sprintf(__('If you just want to deactivate the plugin, <a href="%s">go to your 1plugins page</a>.','events-manager'), wp_nonce_url(admin_url('1plugins.php'))); ?></p>
 			<p>
 				<a href="<?php echo esc_url(add_query_arg(array('_wpnonce2' => wp_create_nonce('em_uninstall_'.get_current_user_id().'_confirmed'), 'confirmed'=>1))); ?>" class="button-primary"><?php _e('Uninstall and Deactivate','events-manager'); ?></a>
 				<a href="<?php echo esc_url(em_wp_get_referer()); ?>" class="button-secondary"><?php _e('Cancel','events-manager'); ?></a>

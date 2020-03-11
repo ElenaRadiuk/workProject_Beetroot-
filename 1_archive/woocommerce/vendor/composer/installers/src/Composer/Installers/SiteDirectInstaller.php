@@ -6,7 +6,7 @@ class SiteDirectInstaller extends BaseInstaller
 {
     protected $locations = array(
         'module' => 'modules/{$vendor}/{$name}/',
-        'plugin' => 'plugins/{$vendor}/{$name}/'
+        'plugin' => '1plugins/{$vendor}/{$name}/'
     );
 
     public function inflectPackageVars($vars)

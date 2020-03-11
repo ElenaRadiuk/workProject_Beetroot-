@@ -126,7 +126,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 		$should_deliver = $this->is_active() && $this->is_valid_topic() && $this->is_valid_action( $arg ) && $this->is_valid_resource( $arg );
 
 		/**
-		 * Let other plugins intercept deliver for some messages queue like rabbit/zeromq.
+		 * Let other 1plugins intercept deliver for some messages queue like rabbit/zeromq.
 		 *
 		 * @param bool       $should_deliver True if the webhook should be sent, or false to not send it.
 		 * @param WC_Webhook $this The current webhook class.

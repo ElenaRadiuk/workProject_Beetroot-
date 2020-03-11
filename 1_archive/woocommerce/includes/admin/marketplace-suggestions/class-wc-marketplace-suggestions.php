@@ -173,7 +173,7 @@ class WC_Marketplace_Suggestions {
 			return false;
 		}
 
-		// Suggestions are only displayed if user can install plugins.
+		// Suggestions are only displayed if user can install 1plugins.
 		if ( ! current_user_can( 'install_plugins' ) ) {
 			return false;
 		}

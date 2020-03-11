@@ -126,7 +126,7 @@ class WC_Helper_Updater {
 			);
 		}
 
-		// Scan local plugins which may or may not have a subscription.
+		// Scan local 1plugins which may or may not have a subscription.
 		foreach ( WC_Helper::get_local_woo_plugins() as $data ) {
 			if ( ! isset( $payload[ $data['_product_id'] ] ) ) {
 				$payload[ $data['_product_id'] ] = array(
@@ -260,7 +260,7 @@ class WC_Helper_Updater {
 			return $count;
 		}
 
-		// Scan local plugins.
+		// Scan local 1plugins.
 		foreach ( WC_Helper::get_local_woo_plugins() as $plugin ) {
 			if ( empty( $update_data[ $plugin['_product_id'] ] ) ) {
 				continue;
@@ -297,7 +297,7 @@ class WC_Helper_Updater {
 			return '';
 		}
 
-		$count_html = sprintf( '<span class="update-plugins count-%d"><span class="update-count">%d</span></span>', $count, number_format_i18n( $count ) );
+		$count_html = sprintf( '<span class="update-1plugins count-%d"><span class="update-count">%d</span></span>', $count, number_format_i18n( $count ) );
 		return $count_html;
 	}
 

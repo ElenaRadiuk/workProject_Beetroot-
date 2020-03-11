@@ -237,7 +237,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	/**
 	 * Get an array of all sale and regular prices from all variations. This is used for example when displaying the price range at variable product level or seeing if the variable product is on sale.
 	 *
-	 * Can be filtered by plugins which modify costs, but otherwise will include the raw meta costs unlike get_price() which runs costs through the woocommerce_get_price filter.
+	 * Can be filtered by 1plugins which modify costs, but otherwise will include the raw meta costs unlike get_price() which runs costs through the woocommerce_get_price filter.
 	 * This is to ensure modified prices are not cached, unless intended.
 	 *
 	 * @param WC_Product $product Product object.
@@ -376,7 +376,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 			}
 
 			/**
-			 * Give plugins one last chance to filter the variation prices array which has been generated and store locally to the class.
+			 * Give 1plugins one last chance to filter the variation prices array which has been generated and store locally to the class.
 			 * This value may differ from the transient cache. It is filtered once before storing locally.
 			 */
 			$this->prices_array[ $price_hash ] = apply_filters( 'woocommerce_variation_prices', $transient_cached_prices_array[ $price_hash ], $product, $for_display );

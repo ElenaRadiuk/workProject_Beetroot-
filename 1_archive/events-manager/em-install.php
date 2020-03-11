@@ -958,7 +958,7 @@ function em_upgrade_current_installation(){
 		update_option('dbem_css_rsvpadmin',0);
 		update_option('dbem_css_catlist',0);
 		update_option('dbem_css_taglist',0);
-		if( locate_template('plugins/events-manager/templates/events-search.php') ){
+		if( locate_template('1plugins/events-manager/templates/events-search.php') ){
 			update_option('dbem_css_search', 0);
 			update_option('dbem_search_form_hide_advanced',0);
 		}
@@ -972,7 +972,7 @@ function em_upgrade_current_installation(){
 		//correcting the typo
 		update_option('dbem_search_form_submit', get_option('dbem_serach_form_submit'));
 		//if template isn't overridden, assume it is still being used
-		if( !locate_template('plugins/events-manager/templates/events-search.php') ){
+		if( !locate_template('1plugins/events-manager/templates/events-search.php') ){
 			delete_option('dbem_serach_form_submit', 0);
 		}
 		//ML translation

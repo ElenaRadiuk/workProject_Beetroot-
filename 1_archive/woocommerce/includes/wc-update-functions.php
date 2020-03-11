@@ -1139,7 +1139,7 @@ function wc_update_260_zone_methods() {
 				$changes[ $old_method->shipping_method_id ] = $new_instance_id;
 			}
 
-			// $changes contains keys (old method ids) and values (new instance ids) if extra processing is needed in plugins.
+			// $changes contains keys (old method ids) and values (new instance ids) if extra processing is needed in 1plugins.
 			// Store this to an option so extensions can pick it up later, then fire an action.
 			update_option( 'woocommerce_updated_instance_ids', $changes );
 			do_action( 'woocommerce_updated_instance_ids', $changes );

@@ -1,7 +1,7 @@
 <?php
 /*
 * This file is called by templates/forms/location-editor.php to display fields for uploading images on your event form on your website. This does not affect the admin featured image section.
-* You can override this file by copying it to /wp-content/themes/yourtheme/plugins/events-manager/forms/event/ and editing it there.
+* You can override this file by copying it to /wp-content/themes/yourtheme/1plugins/events-manager/forms/event/ and editing it there.
 */
 global $EM_Event;
 /* @var $EM_Event EM_Event */
@@ -9,7 +9,7 @@ global $EM_Event;
 <p id="event-image-img">
 <?php if ($EM_Event->get_image_url() != '') : ?>
 	<img src='<?php echo $EM_Event->get_image_url('medium'); ?>' alt='<?php echo $EM_Event->event_name ?>'/>
-<?php else : ?> 
+<?php else : ?>
 	<?php _e('No image uploaded for this event yet', 'events-manager') ?>
 <?php endif; ?>
 </p>

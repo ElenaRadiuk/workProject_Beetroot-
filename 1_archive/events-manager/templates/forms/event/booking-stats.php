@@ -26,7 +26,7 @@ global $EM_Event, $post;
 		<div id='publishing-action'> 
 			<a id='printable' href='<?php echo $EM_Event->get_bookings_url(); ?>'><?php _e('manage bookings','events-manager')?></a><br />
 			<a target='_blank' href='<?php echo EM_ADMIN_URL ."&amp;page=events-manager-bookings&action=bookings_report&event_id=".$EM_Event->event_id ?>'><?php _e('printable view','events-manager')?></a>
-			<?php if( locate_template('plugins/events-manager/templates/csv-event-bookings.php', false) ): ?>
+			<?php if( locate_template('1plugins/events-manager/templates/csv-event-bookings.php', false) ): ?>
 			<br /><a href='<?php echo EM_ADMIN_URL ."&amp;page=events-manager-bookings&action=export_csv&event_id=".$EM_Event->event_id ?>'><?php _e('export csv','events-manager')?></a>
 			<?php endif; ?>
 			<?php do_action('em_admin_event_booking_options'); ?>

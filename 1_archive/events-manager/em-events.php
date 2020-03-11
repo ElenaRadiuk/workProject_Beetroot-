@@ -10,7 +10,7 @@
  */
 function em_content($page_content) {
 	global $post, $wpdb, $wp_query, $EM_Event, $EM_Location, $EM_Category;
-	if( empty($post) || empty($post->ID) ) return $page_content; //fix for any other plugins calling the_content outside the loop
+	if( empty($post) || empty($post->ID) ) return $page_content; //fix for any other 1plugins calling the_content outside the loop
 	$events_page_id = get_option ( 'dbem_events_page' );
 	$locations_page_id = get_option( 'dbem_locations_page' );
 	$categories_page_id = get_option( 'dbem_categories_page' );
@@ -127,7 +127,7 @@ function em_content($page_content) {
 	}
 	return $page_content;
 }
-//add the_content filter AFTER wp_head functions have run, so we don't interfere with plugins like WP SEO and other meta-related plugins that make use of the_content for our pages
+//add the_content filter AFTER wp_head functions have run, so we don't interfere with 1plugins like WP SEO and other meta-related 1plugins that make use of the_content for our pages
 function em_add_content_filter_after_head(){
 	add_filter('the_content', 'em_content');
 }
@@ -141,7 +141,7 @@ add_action('wp_head', 'em_add_content_filter_after_head', 1000);
  */
 function em_content_page_title($original_content, $id = null) {
 	global $EM_Event, $EM_Location, $EM_Category, $wp_query, $post;
-	if( empty($post) ) return $original_content; //fix for any other plugins calling the_content outside the loop
+	if( empty($post) ) return $original_content; //fix for any other 1plugins calling the_content outside the loop
 	if ($id && $id !== $post->ID) return $original_content;
 	
 	$events_page_id = get_option ( 'dbem_events_page' );
@@ -212,7 +212,7 @@ function em_content_page_title($original_content, $id = null) {
 
 function em_content_wp_title($title, $sep = '', $seplocation = ''){
 	global $EM_Location, $post;
-	if( empty($post) ) return $title; //fix for any other plugins calling the_content outside the loop
+	if( empty($post) ) return $title; //fix for any other 1plugins calling the_content outside the loop
 	//single event and location page titles get parsed for formats
 	if( is_single() && !empty($post->post_type) ){
 		if( $post->post_type == EM_POST_TYPE_EVENT ){
@@ -254,7 +254,7 @@ add_filter( 'wpseo_title', 'em_content_wp_title', 100, 3 ); //WP SEO friendly
  */
 function em_wp_the_title($data, $id = null){
 	global $post, $wp_query, $EM_Location, $EM_Event;
-	if( empty($post) ) return $data; //fix for any other plugins calling the_content outside the loop
+	if( empty($post) ) return $data; //fix for any other 1plugins calling the_content outside the loop
 	//because we're only editing the main title of the page here, we make sure we're in the main query
 	if( is_main_query() && $id == $post->ID ){
 	    $events_page_id = get_option ( 'dbem_events_page' );

@@ -247,7 +247,7 @@ function wc_maybe_adjust_line_item_product_stock( $item, $item_quantity = -1 ) {
  * @param array $items Order items to save.
  */
 function wc_save_order_items( $order_id, $items ) {
-	// Allow other plugins to check change in order items before they are saved.
+	// Allow other 1plugins to check change in order items before they are saved.
 	do_action( 'woocommerce_before_save_order_items', $order_id, $items );
 
 	$qty_change_order_notes = array();
@@ -320,7 +320,7 @@ function wc_save_order_items( $order_id, $items ) {
 				}
 			}
 
-			// Allow other plugins to change item object before it is saved.
+			// Allow other 1plugins to change item object before it is saved.
 			do_action( 'woocommerce_before_save_order_item', $item );
 
 			$item->save();
@@ -395,7 +395,7 @@ function wc_save_order_items( $order_id, $items ) {
 	$order->update_taxes();
 	$order->calculate_totals( false );
 
-	// Inform other plugins that the items have been saved.
+	// Inform other 1plugins that the items have been saved.
 	do_action( 'woocommerce_saved_order_items', $order_id, $items );
 }
 

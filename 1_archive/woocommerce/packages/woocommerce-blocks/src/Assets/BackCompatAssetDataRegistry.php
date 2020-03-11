@@ -1,6 +1,6 @@
 <?php
 /**
- * Backwards Compatibility file for plugins using wcSettings in prior versions
+ * Backwards Compatibility file for 1plugins using wcSettings in prior versions
  *
  * @package WooCommerce/Blocks
  * @since 2.5.0
@@ -9,7 +9,7 @@
 namespace Automattic\WooCommerce\Blocks\Assets;
 
 /**
- * Backwards Compatibility class for plugins using wcSettings in prior versions.
+ * Backwards Compatibility class for 1plugins using wcSettings in prior versions.
  *
  * Note: This will be removed at some point.
  *
@@ -36,7 +36,7 @@ class BackCompatAssetDataRegistry extends AssetDataRegistry {
 		);
 
 		$data = rawurlencode( wp_json_encode( $data ) );
-		// for back compat with wc-admin (or other plugins) that expects
+		// for back compat with wc-admin (or other 1plugins) that expects
 		// wcSettings to be always available.
 		// @see https://github.com/woocommerce/woocommerce-gutenberg-products-block/issues/932.
 		echo '<script>';

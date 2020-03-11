@@ -27,7 +27,7 @@ class WC_Updates_Screen_Updates extends WC_Plugin_Updates {
 	}
 
 	/**
-	 * Show a warning message on the upgrades screen if the user tries to upgrade and has untested plugins.
+	 * Show a warning message on the upgrades screen if the user tries to upgrade and has untested 1plugins.
 	 */
 	public function update_screen_modal() {
 		$updateable_plugins = get_plugin_updates();

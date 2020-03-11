@@ -243,7 +243,7 @@ jQuery( function( $ ) {
 			var slug = plugins[ i ].slug;
 			bySlug[ slug ] = bySlug[ slug ] ||
 				$( '<span class="plugin-install-info-list-item">' )
-					.append( '<a href="https://wordpress.org/plugins/' + slug + '/" target="_blank">' + plugins[ i ].name + '</a>' );
+					.append( '<a href="https://wordpress.org/1plugins/' + slug + '/" target="_blank">' + plugins[ i ].name + '</a>' );
 
 			bySlug[ slug ].find( 'a' )
 				.on( 'mouseenter mouseleave', ( function( $hover, event ) {
@@ -297,7 +297,7 @@ jQuery( function( $ ) {
 	}
 
 	updatePluginInfo();
-	$( '.wc-setup-content' ).on( 'change', '[data-plugins]', updatePluginInfo );
+	$( '.wc-setup-content' ).on( 'change', '[data-1plugins]', updatePluginInfo );
 
 	$( document.body ).on( 'init_tooltips', function() {
 		$( '.help_tip' ).tipTip( {

@@ -3,7 +3,7 @@ namespace Composer\Installers;
 
 /**
  *
- * Installer for kanboard plugins
+ * Installer for kanboard 1plugins
  *
  * kanboard.net
  *
@@ -13,6 +13,6 @@ namespace Composer\Installers;
 class KanboardInstaller extends BaseInstaller
 {
     protected $locations = array(
-        'plugin'  => 'plugins/{$name}/',
+        'plugin'  => '1plugins/{$name}/',
     );
 }

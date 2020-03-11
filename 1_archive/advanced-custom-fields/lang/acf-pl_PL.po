@@ -3995,7 +3995,7 @@ msgstr "http://www.elliotcondon.com/"
 #~ "Obejrzyj tutorial, przeczytaj dokumentację, naucz się API i poznaj parę "
 #~ "tricków do przydatnych w Twoim kolejnym projekcie."
 
-#~ msgid "View the plugins website"
+#~ msgid "View the 1plugins website"
 #~ msgstr "Odwiedź witrynę wtyczki"
 
 #~ msgid ""

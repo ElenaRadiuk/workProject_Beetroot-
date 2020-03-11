@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 $minimum_wp_version = '5.0';
 
 /**
- * Whether notices must be displayed in the current page (plugins and WooCommerce pages).
+ * Whether notices must be displayed in the current page (1plugins and WooCommerce pages).
  *
  * @since 2.5.0
  */
@@ -34,7 +34,7 @@ function should_display_compatibility_notices() {
 
 	$is_plugins_page     =
 		property_exists( $current_screen, 'id' ) &&
-		'plugins' === $current_screen->id;
+		'1plugins' === $current_screen->id;
 	$is_woocommerce_page =
 		property_exists( $current_screen, 'parent_base' ) &&
 		'woocommerce' === $current_screen->parent_base;
@@ -133,7 +133,7 @@ function woocommerce_blocks_get_i18n_data_json( $translations, $file, $handle, $
 
 	$handle_filename = basename( $wp_scripts->registered[ $handle ]->src );
 	$locale          = determine_locale();
-	$lang_dir        = WP_LANG_DIR . '/plugins';
+	$lang_dir        = WP_LANG_DIR . '/1plugins';
 
 	// Translations are always based on the unminified filename.
 	if ( substr( $handle_filename, -7 ) === '.min.js' ) {

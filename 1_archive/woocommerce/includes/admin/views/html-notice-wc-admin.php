@@ -18,14 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</p>
 	<?php if ( file_exists( WP_PLUGIN_DIR . '/woocommerce-admin/woocommerce-admin.php' ) && ! is_plugin_active( 'woocommerce-admin/woocommerce-admin.php' ) && current_user_can( 'activate_plugin', 'woocommerce-admin/woocommerce-admin.php' ) ) : ?>
 		<p>
-			<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'plugins.php?action=activate&plugin=woocommerce-admin/woocommerce-admin.php&plugin_status=active' ), 'activate-plugin_woocommerce-admin/woocommerce-admin.php' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Activate WooCommerce Admin', 'woocommerce' ); ?></a>
+			<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( '1plugins.php?action=activate&plugin=woocommerce-admin/woocommerce-admin.php&plugin_status=active' ), 'activate-plugin_woocommerce-admin/woocommerce-admin.php' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Activate WooCommerce Admin', 'woocommerce' ); ?></a>
 		</p>
 	<?php else : ?>
 		<?php
 		if ( current_user_can( 'install_plugins' ) ) {
 			$url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce-admin' ), 'install-plugin_woocommerce-admin' );
 		} else {
-			$url = 'https://wordpress.org/plugins/woocommerce-admin/';
+			$url = 'https://wordpress.org/1plugins/woocommerce-admin/';
 		}
 		?>
 		<p>

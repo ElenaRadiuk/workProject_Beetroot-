@@ -956,7 +956,7 @@ CREATE TABLE {$wpdb->prefix}wc_tax_rate_classes (
 		/**
 		 * Filter the list of known WooCommerce tables.
 		 *
-		 * If WooCommerce plugins need to add new tables, they can inject them here.
+		 * If WooCommerce 1plugins need to add new tables, they can inject them here.
 		 *
 		 * @param array $tables An array of WooCommerce-specific database table names.
 		 */
@@ -1277,7 +1277,7 @@ CREATE TABLE {$wpdb->prefix}wc_tax_rate_classes (
 	public static function plugin_row_meta( $links, $file ) {
 		if ( WC_PLUGIN_BASENAME === $file ) {
 			$row_meta = array(
-				'docs'    => '<a href="' . esc_url( apply_filters( 'woocommerce_docs_url', 'https://docs.woocommerce.com/documentation/plugins/woocommerce/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce documentation', 'woocommerce' ) . '">' . esc_html__( 'Docs', 'woocommerce' ) . '</a>',
+				'docs'    => '<a href="' . esc_url( apply_filters( 'woocommerce_docs_url', 'https://docs.woocommerce.com/documentation/1plugins/woocommerce/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce documentation', 'woocommerce' ) . '">' . esc_html__( 'Docs', 'woocommerce' ) . '</a>',
 				'apidocs' => '<a href="' . esc_url( apply_filters( 'woocommerce_apidocs_url', 'https://docs.woocommerce.com/wc-apidocs/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce API docs', 'woocommerce' ) . '">' . esc_html__( 'API docs', 'woocommerce' ) . '</a>',
 				'support' => '<a href="' . esc_url( apply_filters( 'woocommerce_support_url', 'https://woocommerce.com/my-account/tickets/' ) ) . '" aria-label="' . esc_attr__( 'Visit premium customer support', 'woocommerce' ) . '">' . esc_html__( 'Premium support', 'woocommerce' ) . '</a>',
 			);
@@ -1440,7 +1440,7 @@ CREATE TABLE {$wpdb->prefix}wc_tax_rate_classes (
 							// translators: 1: plugin name, 2: URL to WP plugin page.
 							__( '%1$s was installed but could not be activated. <a href="%2$s">Please activate it manually by clicking here.</a>', 'woocommerce' ),
 							$plugin_to_install['name'],
-							admin_url( 'plugins.php' )
+							admin_url( '1plugins.php' )
 						)
 					);
 				}

@@ -1,7 +1,7 @@
 <?php 
 /*
  * This page displays a printable view of bookings for a single event.
- * You can override the default display settings pages by copying this file to yourthemefolder/plugins/events-manager/templates/ and modifying it however you need.
+ * You can override the default display settings pages by copying this file to yourthemefolder/1plugins/events-manager/templates/ and modifying it however you need.
  * Here you can assume that $EM_Event is globally available with the right EM_Event object.
  */
 global $EM_Event;

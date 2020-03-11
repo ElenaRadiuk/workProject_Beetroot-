@@ -16,7 +16,7 @@ function bp_em_events() {
 
 	add_action( 'bp_template_title', 'bp_em_events_title' );
 	add_action( 'bp_template_content', 'bp_em_events_content' );
-	bp_core_load_template( apply_filters( 'bp_core_template_plugin', 'members/single/plugins' ) );
+	bp_core_load_template( apply_filters( 'bp_core_template_plugin', 'members/single/1plugins' ) );
 	//bp_core_load_template( apply_filters( 'bp_em_template_screen_one', 'em/screen-one' ) );
 }
 	/***

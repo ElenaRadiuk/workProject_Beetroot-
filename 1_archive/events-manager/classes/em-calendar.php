@@ -297,7 +297,7 @@ class EM_Calendar extends EM_Object {
 				$event_page_link = add_query_arg(array('post_type'=>EM_POST_TYPE_EVENT), home_url()); //don't use EM_URI here, since ajax calls this before EM_URI is defined.
 			}
 		}
-		$event_page_link_parts = explode('?', $event_page_link); //in case we have other plugins (e.g. WPML) adding querystring params to the end 
+		$event_page_link_parts = explode('?', $event_page_link); //in case we have other 1plugins (e.g. WPML) adding querystring params to the end 
 		foreach($eventful_days as $day_key => $events) {
 			if( array_key_exists($day_key, $calendar_array['cells']) ){
 				//Get link title for this date

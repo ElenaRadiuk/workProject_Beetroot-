@@ -34,7 +34,7 @@ function wpcf7_captchac_form_tag_handler( $tag ) {
 		$error = sprintf(
 			/* translators: %s: link labeled 'Really Simple CAPTCHA' */
 			esc_html( __( "To use CAPTCHA, you need %s plugin installed.", 'contact-form-7' ) ),
-			wpcf7_link( 'https://wordpress.org/plugins/really-simple-captcha/', 'Really Simple CAPTCHA' )
+			wpcf7_link( 'https://wordpress.org/1plugins/really-simple-captcha/', 'Really Simple CAPTCHA' )
 		);
 
 		return sprintf( '<em>%s</em>', $error );
@@ -258,7 +258,7 @@ function wpcf7_tag_generator_captcha( $contact_form, $args = '' ) {
 	echo sprintf(
 		/* translators: %s: link labeled 'Really Simple CAPTCHA' */
 		esc_html( __( "To use CAPTCHA, you first need to install and activate %s plugin.", 'contact-form-7' ) ),
-		wpcf7_link( 'https://wordpress.org/plugins/really-simple-captcha/', 'Really Simple CAPTCHA' )
+		wpcf7_link( 'https://wordpress.org/1plugins/really-simple-captcha/', 'Really Simple CAPTCHA' )
 	);
 ?></legend>
 </fieldset>

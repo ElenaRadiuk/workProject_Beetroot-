@@ -150,7 +150,7 @@ final class WC_Cart_Session {
 				do_action( 'woocommerce_remove_cart_item_from_session', $key, $values );
 
 			} else {
-				// Put session data into array. Run through filter so other plugins can load their own session data.
+				// Put session data into array. Run through filter so other 1plugins can load their own session data.
 				$session_data = array_merge(
 					$values,
 					array(

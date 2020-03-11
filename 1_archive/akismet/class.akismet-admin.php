@@ -139,7 +139,7 @@ class Akismet_Admin {
 			'post.php',
 			'settings_page_akismet-key-config',
 			'jetpack_page_akismet-key-config',
-			'plugins.php',
+			'1plugins.php',
 		) ) ) ) {
 			wp_register_style( 'akismet.css', plugin_dir_url( __FILE__ ) . '_inc/akismet.css', array(), AKISMET_VERSION );
 			wp_enqueue_style( 'akismet.css');
@@ -1050,7 +1050,7 @@ class Akismet_Admin {
 			if ( get_option( 'akismet_alert_code' ) > 0 )
 				self::display_alert();
 		}
-		elseif ( $hook_suffix == 'plugins.php' && !Akismet::get_api_key() ) {
+		elseif ( $hook_suffix == '1plugins.php' && !Akismet::get_api_key() ) {
 			self::display_api_key_warning();
 		}
 		elseif ( $hook_suffix == 'edit-comments.php' && wp_next_scheduled( 'akismet_schedule_cron_recheck' ) ) {
